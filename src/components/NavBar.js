@@ -11,12 +11,12 @@ const NavBar = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">{props.link1}</Nav.Link>
+            <Nav.Link href="#">{props.link1}</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">{props.link2}</Nav.Link>
-            <Nav.Link href="#deets">{props.link3}</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link href="#">{props.link2}</Nav.Link>
+            <Nav.Link href="#">{props.link3}</Nav.Link>
+            <Nav.Link eventKey={2} href="#">
               {props.link4}
             </Nav.Link>
           </Nav>
