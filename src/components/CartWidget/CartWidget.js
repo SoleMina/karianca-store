@@ -1,10 +1,9 @@
 import React from "react";
 //Font awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-const CartWidget = () => {
-  return <FontAwesomeIcon icon={faShoppingCart} />;
+const CartWidget = (props) => {
+  return <FontAwesomeIcon icon={props.icon} />;
 };
 
 export default CartWidget;
