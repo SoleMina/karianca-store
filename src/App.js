@@ -1,6 +1,7 @@
 import React from "react";
-import NavBar from "./components/NavBar";
 import Spinner from "react-bootstrap/Spinner";
+import NavBar from "./components/Header/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 class App extends React.Component {
   state = { loading: true };
@@ -21,6 +22,7 @@ class App extends React.Component {
             link3="Ofertas"
             link4="Carrito de compras"
           />
+          <ItemListContainer content="Esta es una lista del container" />
         </div>
       );
     }

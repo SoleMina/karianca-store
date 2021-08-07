@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = (props) => {
   return (
@@ -17,7 +18,7 @@ const NavBar = (props) => {
             <Nav.Link href="#">{props.link2}</Nav.Link>
             <Nav.Link href="#">{props.link3}</Nav.Link>
             <Nav.Link eventKey={2} href="#">
-              {props.link4}
+              <CartWidget name="faShoppingCart" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
