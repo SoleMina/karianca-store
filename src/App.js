@@ -2,6 +2,7 @@ import React from "react";
 import Spinner from "react-bootstrap/Spinner";
 import NavBar from "./components/Header/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import laptop1 from "./images/laptop-2.jpg";
 
 class App extends React.Component {
   state = { loading: true };
@@ -22,7 +23,23 @@ class App extends React.Component {
             link3="Ofertas"
             link4="Carrito de compras"
           />
-          <ItemListContainer content="Esta es una lista del container" />
+          <div className="row">
+            <ItemListContainer
+              name="Laptop Chuwi"
+              text="Esta es una lista del container"
+              imagenUrl={laptop1}
+            />
+            <ItemListContainer
+              name="Laptop Chuwi"
+              text="Esta es una lista del container"
+              imagenUrl={laptop1}
+            />
+            <ItemListContainer
+              name="Laptop Chuwi"
+              text="Esta es una lista del container"
+              imagenUrl={laptop1}
+            />
+          </div>
         </div>
       );
     }
