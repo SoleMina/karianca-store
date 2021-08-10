@@ -1,8 +1,5 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import CartWidget from "../CartWidget/CartWidget";
 
