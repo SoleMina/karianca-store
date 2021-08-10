@@ -14,7 +14,7 @@ const NavBar = (props) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#">{props.link1}</Nav.Link>
+            <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="#">{props.link2}</Nav.Link>
@@ -24,7 +24,6 @@ const NavBar = (props) => {
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link eventKey={2} href="#">
               <CartWidget icon={faShoppingCart} />
