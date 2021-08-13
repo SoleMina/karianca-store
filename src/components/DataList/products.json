@@ -64,38 +64,5 @@
     "width": 675,
     "price": 11.14,
     "rating": 4
-  },
-  {
-    "title": "Pesto with basil",
-    "id": 7,
-    "type": "vegetable",
-    "description": "Italian traditional pesto with basil, chesse and oil",
-    "filename": "6.jpg",
-    "height": 450,
-    "width": 299,
-    "price": 18.19,
-    "rating": 2
-  },
-  {
-    "title": "Hazelnut in black ceramic bowl",
-    "id": 8,
-    "type": "vegetable",
-    "description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
-    "filename": "7.jpg",
-    "height": 450,
-    "width": 301,
-    "price": 27.35,
-    "rating": 0
-  },
-  {
-    "title": "Fresh stawberry",
-    "id": 9,
-    "type": "fruit",
-    "description": "Sweet fresh stawberry on the wooden table",
-    "filename": "8.jpg",
-    "height": 600,
-    "width": 399,
-    "price": 28.59,
-    "rating": 4
   }
 ]
