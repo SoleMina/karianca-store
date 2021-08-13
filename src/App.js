@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import NavBar from "./components/Header/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Footer from "./components/Footer/Footer";
 import laptop1 from "./images/laptop-2.jpg";
 
 const App = () => {
@@ -49,11 +50,9 @@ const App = () => {
               );
             })}
           </div>
-          <div>
-            <p>loremmmm</p>
-          </div>
         </div>
       )}
+      <Footer />
     </>
   );
 };
