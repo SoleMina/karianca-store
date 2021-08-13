@@ -4,7 +4,7 @@ import { ItemCounter } from "../Counter/ItemCounter";
 
 const ItemListContainer = (props) => {
   return (
-    <div className="col-md-4 d-flex justify-content-center">
+    <div className="col-md-4 d-flex justify-content-center" key={props.key}>
       <Card style={{ width: "18rem" }}>
         <a href="https://reactjs.org/">
           <Card.Img variant="top" src={props.imagenUrl} alt="Producto" />

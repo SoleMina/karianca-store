@@ -11,7 +11,10 @@ const App = () => {
   //const [completed, setcompleted] = useState(undefined);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    //fetch("https://jsonplaceholder.typicode.com/users")
+    fetch(
+      "https://raw.githubusercontent.com/SoleMina/karianca-store/main/src/components/DataList/products.json"
+    )
       .then((response) => response.json())
       .then((data) => {
         setUsers(data);
@@ -41,8 +44,8 @@ const App = () => {
               return (
                 <ItemListContainer
                   key={user.id}
-                  name={user.name}
-                  text={user.email}
+                  name={user.title}
+                  text="this is a description text"
                   imagenUrl={laptop1}
                   stock={10}
                 />

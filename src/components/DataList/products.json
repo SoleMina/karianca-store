@@ -1,6 +1,7 @@
 [
   {
     "title": "Brown eggs",
+    "id": 1,
     "type": "dairy",
     "description": "Raw organic brown eggs in a basket",
     "filename": "0.jpg",
@@ -11,6 +12,7 @@
   },
   {
     "title": "Sweet fresh stawberry",
+    "id": 2,
     "type": "fruit",
     "description": "Sweet fresh stawberry on the wooden table",
     "filename": "1.jpg",
@@ -21,6 +23,7 @@
   },
   {
     "title": "Asparagus",
+    "id": 3,
     "type": "vegetable",
     "description": "Asparagus with ham on the wooden table",
     "filename": "2.jpg",
@@ -31,6 +34,7 @@
   },
   {
     "title": "Green smoothie",
+    "id": 4,
     "type": "dairy",
     "description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
     "filename": "3.jpg",
@@ -41,6 +45,7 @@
   },
   {
     "title": "Raw legums",
+    "id": 5,
     "type": "vegetable",
     "description": "Raw legums on the wooden table",
     "filename": "4.jpg",
@@ -51,6 +56,7 @@
   },
   {
     "title": "Baking cake",
+    "id": 6,
     "type": "dairy",
     "description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
     "filename": "5.jpg",
@@ -61,6 +67,7 @@
   },
   {
     "title": "Pesto with basil",
+    "id": 7,
     "type": "vegetable",
     "description": "Italian traditional pesto with basil, chesse and oil",
     "filename": "6.jpg",
@@ -71,6 +78,7 @@
   },
   {
     "title": "Hazelnut in black ceramic bowl",
+    "id": 8,
     "type": "vegetable",
     "description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
     "filename": "7.jpg",
@@ -81,6 +89,7 @@
   },
   {
     "title": "Fresh stawberry",
+    "id": 9,
     "type": "fruit",
     "description": "Sweet fresh stawberry on the wooden table",
     "filename": "8.jpg",
