@@ -1,18 +1,18 @@
 import React from "react";
+import { ItemCount } from "../Counter/ItemCount";
 import Card from "react-bootstrap/Card";
-import { ItemCounter } from "../Counter/ItemCounter";
 
-const CardItem = (props) => {
+const CardItem = ({ imagenUrl, name, text, stock }) => {
   return (
     <div className="col-md-4 d-flex justify-content-center mb-4">
       <Card style={{ width: "18rem" }}>
         <a href="https://reactjs.org/">
-          <Card.Img variant="top" src={props.imagenUrl} alt="Producto" />
+          <Card.Img variant="top" src={imagenUrl} alt="Producto" />
         </a>
         <Card.Body>
-          <Card.Title> {props.name}</Card.Title>
-          <Card.Text>{props.text}</Card.Text>
-          <ItemCounter stock={props.stock} initial={1} />
+          <Card.Title> {name}</Card.Title>
+          <Card.Text>{text}</Card.Text>
+          <ItemCount stock={stock} initial={1} />
         </Card.Body>
       </Card>
     </div>

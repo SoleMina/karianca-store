@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Spinner from "react-bootstrap/Spinner";
 import NavBar from "./components/Header/NavBar";
+import Spinner from "react-bootstrap/Spinner";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Footer from "./components/Footer/Footer";
 
