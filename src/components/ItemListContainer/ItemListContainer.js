@@ -1,21 +1,34 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import { ItemCounter } from "../Counter/ItemCounter";
+import React, { useState, useEffect } from "react";
+import CardItem from "./CardItem";
+import laptop1 from "../../images/laptop-2.jpg";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/SoleMina/karianca-store/main/src/components/DataList/products.json"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setProductos(data);
+      });
+  }, []);
+
   return (
-    <div className="col-md-4 d-flex justify-content-center mb-4">
-      <Card style={{ width: "18rem" }}>
-        <a href="https://reactjs.org/">
-          <Card.Img variant="top" src={props.imagenUrl} alt="Producto" />
-        </a>
-        <Card.Body>
-          <Card.Title> {props.name}</Card.Title>
-          <Card.Text>{props.text}</Card.Text>
-          <ItemCounter stock={props.stock} />
-        </Card.Body>
-      </Card>
-    </div>
+    <>
+      {productos.map((producto) => {
+        return (
+          <CardItem
+            key={producto.id}
+            name={producto.title}
+            text="this is a description text"
+            imagenUrl={laptop1}
+            stock={10}
+          />
+        );
+      })}
+    </>
   );
 };
 

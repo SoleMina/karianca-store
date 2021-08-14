@@ -3,19 +3,16 @@ import Spinner from "react-bootstrap/Spinner";
 import NavBar from "./components/Header/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Footer from "./components/Footer/Footer";
-import laptop1 from "./images/laptop-2.jpg";
 
 const App = () => {
   const [loading, setloading] = useState(true);
-  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/SoleMina/karianca-store/main/src/components/DataList/products.json"
     )
       .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
+      .then(() => {
         setloading(false);
       });
   }, []);
@@ -38,17 +35,7 @@ const App = () => {
             link4="Carrito de compras"
           />
           <div className="row">
-            {users.map((user) => {
-              return (
-                <ItemListContainer
-                  key={user.id}
-                  name={user.title}
-                  text="this is a description text"
-                  imagenUrl={laptop1}
-                  stock={10}
-                />
-              );
-            })}
+            <ItemListContainer />
           </div>
         </div>
       )}

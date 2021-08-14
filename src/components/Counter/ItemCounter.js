@@ -20,6 +20,9 @@ export const ItemCounter = ({ stock }) => {
         <p className="m-0">{counter}</p>
         <button onClick={handleIncrement}>+</button>
       </div>
+      <button className="w-100 btn btn-secondary btn-lg btn-block mt-1">
+        Agregar al carrito
+      </button>
     </div>
   );
 };
