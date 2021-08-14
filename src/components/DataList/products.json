@@ -8,7 +8,7 @@
     "height": 600,
     "width": 400,
     "price": 28.1,
-    "rating": 4
+    "stock": 10
   },
   {
     "title": "Sweet fresh stawberry",
@@ -19,7 +19,7 @@
     "height": 450,
     "width": 299,
     "price": 29.45,
-    "rating": 4
+    "stock": 15
   },
   {
     "title": "Asparagus",
@@ -30,7 +30,7 @@
     "height": 450,
     "width": 299,
     "price": 18.95,
-    "rating": 3
+    "stock": 8
   },
   {
     "title": "Green smoothie",
@@ -41,7 +41,7 @@
     "height": 600,
     "width": 399,
     "price": 17.68,
-    "rating": 4
+    "stock": 5
   },
   {
     "title": "Raw legums",
@@ -52,7 +52,7 @@
     "height": 450,
     "width": 299,
     "price": 17.11,
-    "rating": 2
+    "stock": 20
   },
   {
     "title": "Baking cake",
@@ -63,6 +63,6 @@
     "height": 450,
     "width": 675,
     "price": 11.14,
-    "rating": 4
+    "stock": 16
   }
 ]

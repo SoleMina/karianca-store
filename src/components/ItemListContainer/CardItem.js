@@ -12,7 +12,7 @@ const CardItem = (props) => {
         <Card.Body>
           <Card.Title> {props.name}</Card.Title>
           <Card.Text>{props.text}</Card.Text>
-          <ItemCounter stock={props.stock} />
+          <ItemCounter stock={props.stock} initial={1} />
         </Card.Body>
       </Card>
     </div>

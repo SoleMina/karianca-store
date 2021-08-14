@@ -24,7 +24,7 @@ const ItemListContainer = () => {
             name={producto.title}
             text="this is a description text"
             imagenUrl={laptop1}
-            stock={10}
+            stock={producto.stock}
           />
         );
       })}
