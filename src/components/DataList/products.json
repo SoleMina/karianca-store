@@ -1,6 +1,6 @@
 [
   {
-    "title": "Brown eggs",
+    "title": "Macbook Air",
     "id": 1,
     "type": "dairy",
     "description": "Raw organic brown eggs in a basket",
@@ -11,7 +11,7 @@
     "stock": 10
   },
   {
-    "title": "Sweet fresh stawberry",
+    "title": "Macbook Pro",
     "id": 2,
     "type": "fruit",
     "description": "Sweet fresh stawberry on the wooden table",
@@ -22,7 +22,7 @@
     "stock": 15
   },
   {
-    "title": "Asparagus",
+    "title": "Dell",
     "id": 3,
     "type": "vegetable",
     "description": "Asparagus with ham on the wooden table",
@@ -33,7 +33,7 @@
     "stock": 8
   },
   {
-    "title": "Green smoothie",
+    "title": "Asus",
     "id": 4,
     "type": "dairy",
     "description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
@@ -44,7 +44,7 @@
     "stock": 5
   },
   {
-    "title": "Raw legums",
+    "title": "Lenovo",
     "id": 5,
     "type": "vegetable",
     "description": "Raw legums on the wooden table",
@@ -55,7 +55,7 @@
     "stock": 20
   },
   {
-    "title": "Baking cake",
+    "title": "Toshiba",
     "id": 6,
     "type": "dairy",
     "description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
