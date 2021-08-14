@@ -8,7 +8,7 @@ export const ItemCount = ({ stock, initial }) => {
     setCounter(counter < stock ? counter + 1 : counter);
   };
 
-  //Decremente Counter
+  //Decrement Counter
   const handleDecrement = () => {
     setCounter(counter > 0 ? counter - 1 : 0);
   };
