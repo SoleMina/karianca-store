@@ -6,7 +6,7 @@ const CardItem = (props) => {
   return (
     <div className="col-md-4 d-flex justify-content-center mb-4">
       <Card style={{ width: "18rem" }}>
-        <a href="https://reactjs.org/">
+        <a href="https://reactjs.org">
           <Card.Img variant="top" src={props.imagenUrl} alt="Producto" />
         </a>
         <Card.Body>
