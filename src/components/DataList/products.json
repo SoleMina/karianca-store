@@ -2,9 +2,6 @@
   {
     "title": "Macbook Air",
     "id": 1,
-    "type": "dairy",
-    "description": "Raw organic brown eggs in a basket",
-    "filename": "0.jpg",
     "height": 600,
     "width": 400,
     "price": 28.1,
@@ -13,9 +10,6 @@
   {
     "title": "Macbook Pro",
     "id": 2,
-    "type": "fruit",
-    "description": "Sweet fresh stawberry on the wooden table",
-    "filename": "1.jpg",
     "height": 450,
     "width": 299,
     "price": 29.45,
@@ -24,9 +18,6 @@
   {
     "title": "Dell",
     "id": 3,
-    "type": "vegetable",
-    "description": "Asparagus with ham on the wooden table",
-    "filename": "2.jpg",
     "height": 450,
     "width": 299,
     "price": 18.95,
@@ -35,9 +26,6 @@
   {
     "title": "Asus",
     "id": 4,
-    "type": "dairy",
-    "description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
-    "filename": "3.jpg",
     "height": 600,
     "width": 399,
     "price": 17.68,
@@ -46,9 +34,6 @@
   {
     "title": "Lenovo",
     "id": 5,
-    "type": "vegetable",
-    "description": "Raw legums on the wooden table",
-    "filename": "4.jpg",
     "height": 450,
     "width": 299,
     "price": 17.11,
@@ -57,10 +42,6 @@
   {
     "title": "Toshiba",
     "id": 6,
-    "type": "dairy",
-    "description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
-    "filename": "5.jpg",
-    "height": 450,
     "width": 675,
     "price": 11.14,
     "stock": 16

@@ -1,5 +1,5 @@
 import React from "react";
-import { ItemCount } from "../Counter/ItemCount";
+import { ItemCount } from "../ItemCount/ItemCount";
 import Card from "react-bootstrap/Card";
 
 const CardItem = ({ imagenUrl, name, text, stock }) => {
