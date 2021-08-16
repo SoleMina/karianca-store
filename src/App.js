@@ -13,7 +13,9 @@ const App = () => {
     )
       .then((response) => response.json())
       .then(() => {
-        setloading(false);
+        setTimeout(() => {
+          setloading(false);
+        }, 900);
       });
   }, []);
 
