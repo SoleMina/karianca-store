@@ -8,7 +8,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -18,6 +17,9 @@ code {
 }
 .hv-88 {
   height: 88vh;
+}
+.card-img-top {
+  height: 280px;
 }
 /*
 .navbar {
