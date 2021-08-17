@@ -36,7 +36,7 @@ const ItemList = () => {
               name={producto.title}
               description={producto.description}
               price={producto.price}
-              pictureUrl={producto.pictureUrl}
+              pictureUrl={require(producto.pictureUrl)}
               stock={producto.stock}
             />
           );

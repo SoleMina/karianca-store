@@ -3,7 +3,7 @@
     "title": "Macbook Air",
     "id": 1,
     "decription": "This is a powerful machine with a high quality",
-    "pictureUrl": "../images/laptop-2.jpg",
+    "pictureUrl": "../../images/laptop-2.jpg",
     "price": 28.1,
     "stock": 10
   },
