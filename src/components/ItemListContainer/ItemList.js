@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Item from "./Item";
-import laptop1 from "../../images/laptop-2.jpg";
+import Spinner from "react-bootstrap/Spinner";
 
 const ItemList = () => {
+  const [loading, setloading] = useState(true);
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
@@ -12,22 +13,35 @@ const ItemList = () => {
       .then((response) => response.json())
       .then((data) => {
         setProductos(data);
+        setTimeout(() => {
+          setloading(false);
+        }, 1000);
       });
   }, []);
 
   return (
     <>
-      {productos.map((producto) => {
-        return (
-          <Item
-            key={producto.id}
-            name={producto.title}
-            text="this is a description text"
-            imagenUrl={laptop1}
-            stock={producto.stock}
-          />
-        );
-      })}
+      {loading ? (
+        <div className="d-flex justify-content-center align-content-center align-items-center hv-100">
+          <Spinner animation="border" role="status"></Spinner>
+          <span className="mr-auto m-2" size="lg">
+            Loading products...
+          </span>
+        </div>
+      ) : (
+        productos.map((producto) => {
+          return (
+            <Item
+              key={producto.id}
+              name={producto.title}
+              description={producto.description}
+              price={producto.price}
+              pictureUrl={producto.pictureUrl}
+              stock={producto.stock}
+            />
+          );
+        })
+      )}
     </>
   );
 };

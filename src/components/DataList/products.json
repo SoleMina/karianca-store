@@ -2,48 +2,49 @@
   {
     "title": "Macbook Air",
     "id": 1,
-    "height": 600,
-    "width": 400,
+    "decription": "This is a powerful machine with a high quality",
+    "pictureUrl": "../images/laptop-2.jpg",
     "price": 28.1,
     "stock": 10
   },
   {
     "title": "Macbook Pro",
     "id": 2,
-    "height": 450,
-    "width": 299,
+    "decription": "This is a powerful machine with a high quality",
+    "pictureUrl": "../../images/laptop-2.jpg",
     "price": 29.45,
     "stock": 15
   },
   {
     "title": "Dell",
     "id": 3,
-    "height": 450,
-    "width": 299,
+    "decription": "This is a powerful machine with a high quality",
+    "pictureUrl": "../../images/laptop-2.jpg",
     "price": 18.95,
     "stock": 8
   },
   {
     "title": "Asus",
     "id": 4,
-    "height": 600,
-    "width": 399,
+    "decription": "This is a powerful machine with a high quality",
+    "pictureUrl": "../../images/laptop-2.jpg",
     "price": 17.68,
     "stock": 5
   },
   {
     "title": "Lenovo",
     "id": 5,
-    "height": 450,
-    "width": 299,
+    "decription": "This is a powerful machine with a high quality",
+    "pictureUrl": "../../images/laptop-2.jpg",
     "price": 17.11,
     "stock": 20
   },
   {
     "title": "Toshiba",
     "id": 6,
-    "width": 675,
-    "price": 11.14,
+    "decription": "This is a powerful machine with a high quality",
+    "pictureUrl": "../../images/laptop-2.jpg",
+    "price": 17.11,
     "stock": 16
   }
 ]
