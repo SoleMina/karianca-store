@@ -30,13 +30,15 @@ const ItemList = () => {
         </div>
       ) : (
         productos.map((producto) => {
+          const loadImage = (imageName) =>
+            require(`../images/${imageName}`).default;
           return (
             <Item
               key={producto.id}
               name={producto.title}
               description={producto.description}
               price={producto.price}
-              pictureUrl={require(producto.pictureUrl)}
+              pictureUrl={loadImage(producto.pictureUrl)}
               stock={producto.stock}
             />
           );
