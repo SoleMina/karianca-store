@@ -22,7 +22,7 @@ const ItemList = () => {
   return (
     <>
       {loading ? (
-        <div className="d-flex justify-content-center align-content-center align-items-center hv-100">
+        <div className="d-flex justify-content-center align-content-center align-items-center hv-88">
           <Spinner animation="border" role="status"></Spinner>
           <span className="mr-auto m-2" size="lg">
             Loading products...
@@ -30,15 +30,13 @@ const ItemList = () => {
         </div>
       ) : (
         productos.map((producto) => {
-          const loadImage = (imageName) =>
-            require(`../images/${imageName}`).default;
           return (
             <Item
               key={producto.id}
               name={producto.title}
               description={producto.description}
               price={producto.price}
-              pictureUrl={loadImage(producto.pictureUrl)}
+              pictureUrl={producto.pictureUrl}
               stock={producto.stock}
             />
           );
