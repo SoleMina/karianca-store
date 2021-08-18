@@ -2,7 +2,7 @@
   {
     "title": "Chuwi",
     "id": 1,
-    "decription": "This is a powerful machine with a high quality",
+    "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-2.jpg",
     "price": 28.1,
     "stock": 10
@@ -10,7 +10,7 @@
   {
     "title": "Macbook Lenovo",
     "id": 2,
-    "decription": "This is a powerful machine with a high quality",
+    "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-lenovo.jpg",
     "price": 29.45,
     "stock": 15
@@ -18,7 +18,7 @@
   {
     "title": "Dell",
     "id": 3,
-    "decription": "This is a powerful machine with a high quality",
+    "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-dell-2.jpg",
     "price": 18.95,
     "stock": 8
@@ -26,7 +26,7 @@
   {
     "title": "Asus",
     "id": 4,
-    "decription": "This is a powerful machine with a high quality",
+    "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-asus.jpg",
     "price": 17.68,
     "stock": 5
@@ -34,7 +34,7 @@
   {
     "title": "Macbook Air",
     "id": 5,
-    "decription": "This is a powerful machine with a high quality",
+    "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/macbook-air.jpg",
     "price": 17.11,
     "stock": 20
@@ -42,7 +42,7 @@
   {
     "title": "Toshiba",
     "id": 6,
-    "decription": "This is a powerful machine with a high quality",
+    "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-toshiba.jpg",
     "price": 17.11,
     "stock": 16
