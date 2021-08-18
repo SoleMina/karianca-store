@@ -13,7 +13,7 @@ const ItemListContainer = () => {
       .then((response) => response.json())
       .then((data) => {
         setProductos(data);
-        //Add setTimeout because fetch loading is too fast
+        //Adding setTimeout because fetch loading is too fast
         setTimeout(() => {
           setLoading(false);
         }, 1000);
