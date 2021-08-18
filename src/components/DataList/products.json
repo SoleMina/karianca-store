@@ -8,10 +8,10 @@
     "stock": 10
   },
   {
-    "title": "Macbook ir",
+    "title": "Macbook Lenovo",
     "id": 2,
     "decription": "This is a powerful machine with a high quality",
-    "pictureUrl": "../../images/macbook-air.jpg",
+    "pictureUrl": "../../images/laptop-lenovo.jpg",
     "price": 29.45,
     "stock": 15
   },
@@ -32,10 +32,10 @@
     "stock": 5
   },
   {
-    "title": "Macbook Pro",
+    "title": "Macbook Air",
     "id": 5,
     "decription": "This is a powerful machine with a high quality",
-    "pictureUrl": "../../images/macbook-pro.jpg",
+    "pictureUrl": "../../images/macbook-air.jpg",
     "price": 17.11,
     "stock": 20
   },
