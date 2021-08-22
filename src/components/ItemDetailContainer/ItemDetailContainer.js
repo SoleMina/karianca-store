@@ -2,15 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ItemDetail from "./ItemDetail";
 
-const ItemDetailContainer = () => {
-  const [item, setItem] = useState(0);
+const ItemDetailContainer = ({ match }) => {
+  let charID = match.params.id;
+  const [item, setItem] = useState([]);
 
   useEffect(() => {
     axios(
       "https://raw.githubusercontent.com/SoleMina/karianca-store/main/src/components/DataList/products.json"
-    ).then((res) => setItem(res));
-  }, []);
-
+    ).then((res) => setItem(res.data[charID]));
+  }, [charID]);
+  console.log("ESTE ES: ", item);
   return (
     <div>
       <h1>Item Detail Container</h1>

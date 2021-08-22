@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 const NavBar = (props) => {
   return (

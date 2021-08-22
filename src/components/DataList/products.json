@@ -1,7 +1,7 @@
 [
   {
     "title": "Chuwi",
-    "id": 1,
+    "id": 0,
     "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-2.jpg",
     "category": "chuwi",
@@ -10,7 +10,7 @@
   },
   {
     "title": "Lenovo",
-    "id": 2,
+    "id": 1,
     "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-lenovo.jpg",
     "category": "lenovo",
@@ -19,7 +19,7 @@
   },
   {
     "title": "Dell",
-    "id": 3,
+    "id": 2,
     "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-dell-2.jpg",
     "category": "dell",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Asus",
-    "id": 4,
+    "id": 3,
     "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-asus.jpg",
     "category": "asus",
@@ -37,7 +37,7 @@
   },
   {
     "title": "Macbook Air",
-    "id": 5,
+    "id": 4,
     "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/macbook-air.jpg",
     "category": "macbook",
@@ -46,7 +46,7 @@
   },
   {
     "title": "Toshiba",
-    "id": 6,
+    "id": 5,
     "description": "This is a powerful machine with a high quality",
     "pictureUrl": "../../images/laptop-toshiba.jpg",
     "category": "toshiba",

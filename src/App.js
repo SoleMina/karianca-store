@@ -1,11 +1,19 @@
 import React from "react";
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Footer from "./components/Footer/Footer";
+
+//React-Router-Dom
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//Components
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
+//Views
+import Home from "./views/Home/Home";
 
 const App = () => {
   return (
-    <>
+    <Router>
       <div>
         <NavBar
           link1="Nosotros"
@@ -13,12 +21,14 @@ const App = () => {
           link3="Ofertas"
           link4="Carrito de compras"
         />
-        <div className="row">
-          <ItemListContainer />
-        </div>
+
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/detail/:id" component={ItemDetailContainer} />
+        </Switch>
       </div>
       <Footer />
-    </>
+    </Router>
   );
 };
 
