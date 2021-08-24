@@ -24,6 +24,13 @@ code {
 .card-img-top {
   height: 280px;
 }
+.btn-general {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+}
+.btn-general:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
 /*
 .navbar {
   display: flex;

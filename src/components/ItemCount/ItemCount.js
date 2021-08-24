@@ -15,7 +15,7 @@ export const ItemCount = ({ stock, initial }) => {
 
   return (
     <div className="container">
-      <div className="counter-container d-flex justify-content-lg-between">
+      <div className="counter-container d-flex justify-content-between">
         <button onClick={handleDecrement}>-</button>
         <p className="m-0">{counter}</p>
         <button onClick={handleIncrement}>+</button>
