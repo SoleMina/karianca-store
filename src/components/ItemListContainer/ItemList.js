@@ -11,7 +11,10 @@ const ItemList = ({ productos }) => {
             className="col-md-4 d-flex justify-content-center mb-4"
             key={producto.id}
           >
-            <Link to={`/detail/${producto.id}`}>
+            <Link
+              to={`/detail/${producto.id}`}
+              style={{ textDecoration: "40px", color: "#212529" }}
+            >
               <Item
                 name={producto.title}
                 description={producto.description}
