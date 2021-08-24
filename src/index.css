@@ -19,7 +19,7 @@ code {
   height: 88vh;
 }
 .hv-85 {
-  height: 85vh;
+  min-height: 85vh;
 }
 .card-img-top {
   height: 280px;

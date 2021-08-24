@@ -12,7 +12,7 @@ const ItemList = ({ productos }) => {
             key={producto.id}
           >
             <Link
-              to={`/detail/${producto.id}`}
+              to={`/item/${producto.id}`}
               style={{ textDecoration: "40px", color: "#212529" }}
             >
               <Item
