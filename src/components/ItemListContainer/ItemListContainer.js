@@ -8,7 +8,7 @@ const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
 
   const { categoryId } = useParams();
-  console.log("CATEGORY ID: ", categoryId);
+  //console.log("CATEGORY ID: ", categoryId);
 
   useEffect(() => {
     fetch(
@@ -24,7 +24,7 @@ const ItemListContainer = () => {
         //Adding setTimeout because fetch loading is too fast
         setTimeout(() => {
           setLoading(false);
-        }, 1000);
+        }, 500);
       });
   }, [categoryId]);
 

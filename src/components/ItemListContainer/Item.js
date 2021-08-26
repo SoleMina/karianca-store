@@ -9,7 +9,6 @@ const CardItem = ({ pictureUrl, name, description, stock }) => {
       <Card.Body>
         <Card.Title> {name}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <ItemCount stock={stock} initial={1} />
       </Card.Body>
     </Card>
   );
