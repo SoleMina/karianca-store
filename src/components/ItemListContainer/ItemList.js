@@ -21,6 +21,7 @@ const ItemList = ({ productos }) => {
                 price={producto.price}
                 pictureUrl={producto.pictureUrl}
                 stock={producto.stock}
+                category={producto.category}
               />
             </Link>
           </div>

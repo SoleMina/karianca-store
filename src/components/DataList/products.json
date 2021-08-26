@@ -52,5 +52,32 @@
     "category": "toshiba",
     "price": 2900,
     "stock": 16
+  },
+  {
+    "title": "Samsung",
+    "id": 6,
+    "description": "This is a powerful machine with a high quality",
+    "pictureUrl": "../../images/samsung-tv.jpg",
+    "category": "tv",
+    "price": 3500,
+    "stock": 20
+  },
+  {
+    "title": "Xiaomi",
+    "id": 7,
+    "description": "This is a powerful machine with a high quality",
+    "pictureUrl": "../../images/xiaomi-tv.jpg",
+    "category": "tv",
+    "price": 2500,
+    "stock": 10
+  },
+  {
+    "title": "Sony",
+    "id": 5,
+    "description": "This is a powerful machine with a high quality",
+    "pictureUrl": "../../images/sony-tv.jpg",
+    "category": "tv",
+    "price": 2200,
+    "stock": 14
   }
 ]

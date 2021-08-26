@@ -16,10 +16,12 @@ const NavBar = (props) => {
           <Nav>
             <Nav.Link href="#">{props.link2}</Nav.Link>
             <Nav.Link href="#">{props.link3}</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
+            <NavDropdown title="Categorías" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/category/lenovo">
+                Laptops
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/category/cellphones">
+                Cellphones
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link eventKey={2} href="#">
