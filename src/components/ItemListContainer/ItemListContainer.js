@@ -29,7 +29,15 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
-    <>{loading ? <SpinnerContainer /> : <ItemList productos={productos} />}</>
+    <>
+      {loading ? (
+        <SpinnerContainer />
+      ) : (
+        <div className="row">
+          <ItemList productos={productos} />
+        </div>
+      )}
+    </>
   );
 };
 

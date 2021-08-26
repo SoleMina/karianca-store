@@ -20,9 +20,7 @@ const NavBar = (props) => {
               <NavDropdown.Item href="/category/lenovo">
                 Laptops
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/cellphones">
-                Cellphones
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/category/tv">Tv</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link eventKey={2} href="#">
               <CartWidget icon={faShoppingCart} />
