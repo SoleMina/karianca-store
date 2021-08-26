@@ -17,7 +17,7 @@ const NavBar = (props) => {
             <Nav.Link href="#">{props.link2}</Nav.Link>
             <Nav.Link href="#">{props.link3}</Nav.Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/category/lenovo">
+              <NavDropdown.Item href="/category/laptops">
                 Laptops
               </NavDropdown.Item>
               <NavDropdown.Item href="/category/tv">Tv</NavDropdown.Item>
