@@ -38,11 +38,13 @@ const ItemDetail = ({ item }) => {
                 comprarBtn={comprarBtn}
               />
               {cart && (
-                <Link to="/cart">
-                  <button className="w-100 btn btn-secondary btn-lg btn-block mt-1">
-                    Terminar Compra
-                  </button>
-                </Link>
+                <div className="container">
+                  <Link to="/cart">
+                    <button className="w-100 btn btn-secondary btn-lg btn-block mt-1">
+                      Terminar Compra
+                    </button>
+                  </Link>
+                </div>
               )}
             </Card.Body>
           </Card>
