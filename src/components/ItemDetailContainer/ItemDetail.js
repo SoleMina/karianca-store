@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import { ItemCount } from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
+  const [cart, setCart] = useState(false);
+
+  //On Add
+  const onAdd = (quantityToAdd) => {
+    console.log("Cantidad en On add", quantityToAdd);
+  };
+
+  //Comprar Button
+  const comprarBtn = (counter) => {
+    setCart(true);
+    console.log(`Se ha añadido ${counter} productos`);
+  };
+
+  //Testing callback
+  const callback = (hello) => {
+    console.log(hello + " This is a callback from child to parent");
+  };
+
   return (
     <div className="container mb-4 hv-85">
       <div className="row">
@@ -11,7 +30,20 @@ const ItemDetail = ({ item }) => {
             <Card.Img variant="top" src={item.pictureUrl} alt="Producto" />
             <Card.Body>
               <Card.Title>{item.title} </Card.Title>
-              <ItemCount stock={item.stock} initial={1} />
+              <ItemCount
+                stock={item.stock}
+                initial={1}
+                callback={callback}
+                onAdd={onAdd}
+                comprarBtn={comprarBtn}
+              />
+              {cart && (
+                <Link to="/cart">
+                  <button className="w-100 btn btn-secondary btn-lg btn-block mt-1">
+                    Terminar Compra
+                  </button>
+                </Link>
+              )}
             </Card.Body>
           </Card>
         </div>

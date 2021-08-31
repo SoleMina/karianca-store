@@ -16,12 +16,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <NavBar
-          link1="Nosotros"
-          link2="Productos"
-          link3="Ofertas"
-          link4="Carrito de compras"
-        />
+        <NavBar link1="Nosotros" link2="Ofertas" link3="Carrito de compras" />
 
         <Switch>
           <Route path="/" exact component={Home} />

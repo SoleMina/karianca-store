@@ -14,15 +14,14 @@ const NavBar = (props) => {
             <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#">{props.link2}</Nav.Link>
-            <Nav.Link href="#">{props.link3}</Nav.Link>
+            {/*<Nav.Link href="#">{props.link2}</Nav.Link>*/}
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
               <NavDropdown.Item href="/category/laptops">
                 Laptops
               </NavDropdown.Item>
               <NavDropdown.Item href="/category/tv">Tv</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link eventKey={2} href="#">
+            <Nav.Link eventKey={2} href="/cart">
               <CartWidget icon={faShoppingCart} />
             </Nav.Link>
           </Nav>

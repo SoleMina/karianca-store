@@ -1,8 +1,7 @@
 import React from "react";
-import { ItemCount } from "../ItemCount/ItemCount";
 import Card from "react-bootstrap/Card";
 
-const CardItem = ({ pictureUrl, name, description, stock }) => {
+const CardItem = ({ pictureUrl, name, description }) => {
   return (
     <Card className="text-center" style={{ width: "18rem" }}>
       <Card.Img variant="top" src={pictureUrl} alt="Producto" />
