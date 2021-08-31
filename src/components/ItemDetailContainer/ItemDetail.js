@@ -11,12 +11,6 @@ const ItemDetail = ({ item }) => {
     setCart(quantityToAdd);
     console.log(`Se ha añadido ${quantityToAdd} productos`);
   };
-
-  //Testing callback
-  const callback = (hello) => {
-    console.log(hello + " This is a callback from child to parent");
-  };
-
   return (
     <div className="container mb-4 hv-85">
       <div className="row">
@@ -25,12 +19,7 @@ const ItemDetail = ({ item }) => {
             <Card.Img variant="top" src={item.pictureUrl} alt="Producto" />
             <Card.Body>
               <Card.Title>{item.title} </Card.Title>
-              <ItemCount
-                stock={item.stock}
-                initial={1}
-                callback={callback}
-                onAdd={onAdd}
-              />
+              <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
               {cart > 0 && (
                 <div className="container">
                   <Link to="/cart">
