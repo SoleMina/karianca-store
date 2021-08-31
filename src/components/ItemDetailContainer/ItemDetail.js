@@ -4,17 +4,12 @@ import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
-  const [cart, setCart] = useState(false);
+  const [cart, setCart] = useState(0);
 
   //On Add
   const onAdd = (quantityToAdd) => {
-    console.log("Cantidad en On add", quantityToAdd);
-  };
-
-  //Comprar Button
-  const comprarBtn = (counter) => {
-    setCart(true);
-    console.log(`Se ha añadido ${counter} productos`);
+    setCart(quantityToAdd);
+    console.log(`Se ha añadido ${quantityToAdd} productos`);
   };
 
   //Testing callback
@@ -35,9 +30,8 @@ const ItemDetail = ({ item }) => {
                 initial={1}
                 callback={callback}
                 onAdd={onAdd}
-                comprarBtn={comprarBtn}
               />
-              {cart && (
+              {cart > 0 && (
                 <div className="container">
                   <Link to="/cart">
                     <button className="w-100 btn btn-secondary btn-lg btn-block mt-1">
