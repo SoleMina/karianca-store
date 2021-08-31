@@ -5,12 +5,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 
   //Increment Counter
   const handleIncrement = () => {
-    if (counter < stock) {
-      setCounter(counter + 1);
-    } else {
-      setCounter(counter);
-      console.log("Add function:", counter);
-    }
+    counter < stock ? setCounter(counter + 1) : setCounter(counter);
   };
 
   //Decrement Counter
