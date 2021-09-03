@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
+export const ItemCount = ({ stock, initial, onAdd, callback }) => {
   const [counter, setCounter] = useState(initial);
 
   //Increment Counter
@@ -14,7 +14,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container" onClick={() => callback("heyyyy")}>
       <div className="counter-container d-flex justify-content-between">
         <button onClick={handleDecrement}>-</button>
         <p className="m-0">{counter}</p>

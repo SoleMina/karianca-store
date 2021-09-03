@@ -2,15 +2,25 @@ import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { useItemsContext } from "../../CartContext";
 
 const ItemDetail = ({ item }) => {
   const [cart, setCart] = useState(0);
 
+  const { addToCart, removeItem } = useItemsContext();
+
   //On Add
   const onAdd = (quantityToAdd) => {
     setCart(quantityToAdd);
+    addToCart(item, quantityToAdd);
     console.log(`Se ha añadido ${quantityToAdd} productos`);
   };
+
+  //Testing callback
+  const callback = (hello) => {
+    console.log(hello + " This is a callback from child to parent");
+  };
+
   return (
     <div className="container mb-4 hv-85">
       <div className="row">
@@ -19,7 +29,12 @@ const ItemDetail = ({ item }) => {
             <Card.Img variant="top" src={item.pictureUrl} alt="Producto" />
             <Card.Body>
               <Card.Title>{item.title} </Card.Title>
-              <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+              <ItemCount
+                stock={item.stock}
+                initial={1}
+                callback={callback}
+                onAdd={onAdd}
+              />
               {cart > 0 && (
                 <div className="container">
                   <Link to="/cart">
@@ -27,6 +42,7 @@ const ItemDetail = ({ item }) => {
                       Terminar Compra
                     </button>
                   </Link>
+                  <button onClick={() => removeItem(item.id)}>Eliminar</button>
                 </div>
               )}
             </Card.Body>
