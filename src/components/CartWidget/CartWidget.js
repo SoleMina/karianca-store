@@ -8,12 +8,12 @@ import { useItemsContext } from "../../CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CartWidget = (props) => {
-  const { cartItems } = useItemsContext();
+  const { cartItems, totalProducts } = useItemsContext();
   return (
     <div>
       <FontAwesomeIcon icon={props.icon} data-count="0" />
       <span className="cart-counter">
-        {cartItems.length > 0 ? cartItems[cartItems.length - 1].quantity : 0}
+        {cartItems.length > 0 ? totalProducts : 0}
       </span>
     </div>
   );

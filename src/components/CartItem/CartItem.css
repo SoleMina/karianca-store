@@ -1,4 +1,8 @@
 .cart-item {
   width: 70%;
   margin: 0 auto;
+  padding: 2%;
+  background-color: #7b7b7b;
+  border: 2px solid #3c3a3a;
+  color: white;
 }

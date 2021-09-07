@@ -16,7 +16,7 @@ code {
   height: 100vh;
 }
 .hv-88 {
-  height: 88vh;
+  min-height: 88vh;
 }
 .hv-85 {
   min-height: 85vh;
