@@ -1,4 +1,4 @@
-import React, { useState, useContext, createContext } from "react";
+import React, { useState, useContext, createContext, useEffect } from "react";
 
 //.- CREAR EL CONTEXTO
 export const ItemsContext = createContext({});
@@ -9,7 +9,17 @@ export const useItemsContext = () => useContext(ItemsContext);
 
 //- PASAR PROPS DENTRO DEL COMPONENTE PROVIDER
 export const CartContext = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  //Añadir localstore
+  const itemsInLocal = () => {
+    if (localStorage.getItem("cartItems") !== null) {
+      return JSON.parse(localStorage.getItem("cartItems"));
+    } else {
+      return [];
+    }
+  };
+
+  //const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(itemsInLocal);
   console.log("CART ITEMS", cartItems);
   const isInCart = (id) => cartItems.some((e) => e.id === id);
 
@@ -32,9 +42,15 @@ export const CartContext = ({ children }) => {
 
   const clear = () => setCartItems([]);
 
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  });
+
   //REETURNCONTEXT WITH A .PROVIDER
   return (
-    <ItemsContext.Provider value={{ cartItems, addToCart, removeItem, clear }}>
+    <ItemsContext.Provider
+      value={{ cartItems, addToCart, removeItem, clear, itemsInLocal }}
+    >
       {children}
     </ItemsContext.Provider>
   );
