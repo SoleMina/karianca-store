@@ -1,11 +1,13 @@
 import React from "react";
-import "./CartWidget.css";
 
 //Import context
 import { useItemsContext } from "../../CartContext";
 
 //Font awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+//Importar estilos
+import "./CartWidget.css";
 
 const CartWidget = (props) => {
   const { cartItems, totalProducts } = useItemsContext();

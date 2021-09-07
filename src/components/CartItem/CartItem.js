@@ -1,6 +1,9 @@
 import React from "react";
-import { ItemCount } from "../ItemCount/ItemCount";
+
+//Import context
 import { useItemsContext } from "../../CartContext";
+
+//Import estilos
 import "./CartItem.css";
 
 const CartItem = ({ item }) => {
@@ -12,7 +15,7 @@ const CartItem = ({ item }) => {
         <div className="row">
           <div className="col-md-4 justify-content-center">
             <img src={item.pictureUrl} alt="Producto" width="100" />
-            <h3>{item.title}</h3>
+            <h4>{item.title}</h4>
 
             <button onClick={() => removeItem(item.id)}>Eliminar</button>
           </div>

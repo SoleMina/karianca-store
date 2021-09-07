@@ -2,12 +2,14 @@ import React from "react";
 import { useItemsContext } from "../../CartContext";
 import CartItem from "../CartItem/CartItem";
 import { Link } from "react-router-dom";
+
+//Estilo
 import "./Cart.css";
 
 const Cart = () => {
-  const { cartItems, totalPrice } = useItemsContext();
+  const { cartItems, totalPrice, totalProducts } = useItemsContext();
   return (
-    <div className="bg-gray vh-85">
+    <div className="bg-gray vh-100">
       <h1 className="text-center pt-4">Productos de Compra</h1>
       {/*<div>Producto: {cartItems.length > 0 && cartItems[0].title}</div>*/}
       {cartItems.length > 0 ? (
@@ -15,7 +17,19 @@ const Cart = () => {
           {cartItems.map((item) => {
             return <CartItem key={item.id} item={item} />;
           })}
-          <div className="cart-item text-right">Total: {totalPrice}</div>
+          <div className="cart-item">
+            <div className="row">
+              <div className="col-md-4"></div>
+              <div className="col-md-4 text-center">
+                Cantidad Total:
+                <p>{totalProducts}</p>
+              </div>
+              <div className="col-md-4">
+                Monto Total:
+                <p>{totalPrice}</p>
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
         <div className="container">
