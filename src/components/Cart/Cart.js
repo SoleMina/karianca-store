@@ -19,14 +19,15 @@ const Cart = () => {
           })}
           <div className="cart-item">
             <div className="row">
-              <div className="col-md-4"></div>
-              <div className="col-md-4 text-center">
+              <div className="col-md-3"></div>
+              <div className="col-md-3 text-center">
                 Cantidad Total:
                 <p>{totalProducts}</p>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-3"></div>
+              <div className="col-md-3">
                 Monto Total:
-                <p>{totalPrice}</p>
+                <p>S/. {totalPrice}</p>
               </div>
             </div>
           </div>
