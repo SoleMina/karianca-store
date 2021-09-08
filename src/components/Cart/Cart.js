@@ -10,7 +10,7 @@ const Cart = () => {
   const { cartItems, totalPrice, totalProducts } = useItemsContext();
   return (
     <div className="bg-gray vh-100">
-      <h1 className="text-center pt-4">Productos de Compra</h1>
+      <h1 className="text-center pt-4 mb-4">Productos de Compra</h1>
       {/*<div>Producto: {cartItems.length > 0 && cartItems[0].title}</div>*/}
       {cartItems.length > 0 ? (
         <div>

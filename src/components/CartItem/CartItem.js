@@ -11,7 +11,7 @@ const CartItem = ({ item }) => {
 
   return (
     <>
-      <div className="cart-item mb-5 mt-5">
+      <div className="cart-item">
         <div className="row">
           <div className="col-md-4 justify-content-center">
             <img src={item.pictureUrl} alt="Producto" width="100" />
