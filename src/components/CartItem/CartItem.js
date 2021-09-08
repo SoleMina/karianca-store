@@ -13,13 +13,15 @@ const CartItem = ({ item }) => {
     <>
       <div className="cart-item">
         <div className="row">
-          <div className="col-md-3 justify-content-center">
+          <div className="col-md-2 justify-content-center">
             <img src={item.pictureUrl} alt="Producto" width="100" />
-            <h4>{item.title}</h4>
-
             <button onClick={() => removeItem(item.id)}>Eliminar</button>
           </div>
-          <div className="col-md-3 text-center">
+          <div className="col-md-2 text-center">
+            <p>Product Name:</p>
+            <h5>{item.title}</h5>
+          </div>
+          <div className="col-md-2">
             <p>Cantidad:</p>
             <p>{item.quantity}</p>
           </div>

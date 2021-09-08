@@ -1,6 +1,9 @@
 .bg-gray {
-  background-color: #cacaca;
+  background-color: #616161d1;
 }
 .text-right {
   text-align: right;
+}
+.btn-cart-404 {
+  color: white;
 }

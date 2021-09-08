@@ -19,13 +19,7 @@ const Cart = () => {
           })}
           <div className="cart-item">
             <div className="row">
-              <div className="col-md-3"></div>
-              <div className="col-md-3 text-center">
-                Cantidad Total:
-                <p>{totalProducts}</p>
-              </div>
-              <div className="col-md-3"></div>
-              <div className="col-md-3">
+              <div className="col-md-12 text-center">
                 Monto Total:
                 <p>S/. {totalPrice}</p>
               </div>
@@ -36,7 +30,9 @@ const Cart = () => {
         <div className="container">
           <div className="hv-85">
             <h4 className="mt-5">No hay productos en el carrito</h4>
-            <Link to={`/`}>Go back to Homepage</Link>
+            <Link to={`/`} className="btn-cart-404">
+              Go back to Homepage
+            </Link>
           </div>
         </div>
       )}
