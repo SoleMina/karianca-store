@@ -28,7 +28,7 @@ const ItemDetail = ({ item }) => {
       <div className="row">
         <div className="col-md-6 d-flex justify-content-center">
           <Card className="text-center" style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={item.pictureUrl} alt="Producto" />
+            <Card.Img variant="top" src={item.img} alt="Producto" />
             <Card.Body>
               <Card.Title>{item.title} </Card.Title>
               <ItemCount

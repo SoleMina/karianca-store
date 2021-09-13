@@ -18,7 +18,7 @@ const NavBar = () => {
           </Nav>
           <Nav>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/category/laptops">
+              <NavDropdown.Item as={Link} to="/category/laptop">
                 Laptops
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/tv">

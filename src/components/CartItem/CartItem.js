@@ -14,7 +14,7 @@ const CartItem = ({ item }) => {
       <div className="cart-item">
         <div className="row">
           <div className="col-md-2 justify-content-center">
-            <img src={item.pictureUrl} alt="Producto" width="100" />
+            <img src={item.img} alt="Producto" width="100" />
             <button onClick={() => removeItem(item.id)}>Eliminar</button>
           </div>
           <div className="col-md-2 text-center">

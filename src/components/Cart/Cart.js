@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cartItems, totalPrice, totalProducts } = useItemsContext();
+  const { cartItems, totalPrice } = useItemsContext();
   return (
     <div className="bg-gray vh-100">
       <h1 className="text-center pt-4 mb-4">Productos de Compra</h1>
