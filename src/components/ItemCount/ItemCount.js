@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const ItemCount = ({ stock, initial, onAdd, callback }) => {
+export const ItemCount = ({ stock, initial, onAdd, cart, callback }) => {
   const [counter, setCounter] = useState(initial);
 
   //Increment Counter
@@ -20,12 +20,14 @@ export const ItemCount = ({ stock, initial, onAdd, callback }) => {
         <p className="m-0">{counter}</p>
         <button onClick={handleIncrement}>+</button>
       </div>
-      <button
-        onClick={() => onAdd(counter)}
-        className="w-100 btn btn-secondary btn-lg btn-block mt-1"
-      >
-        Agregar al carrito
-      </button>
+      {cart === 0 && (
+        <button
+          onClick={() => onAdd(counter)}
+          className="w-100 btn btn-secondary btn-lg btn-block mt-1"
+        >
+          Agregar al carrito
+        </button>
+      )}
     </div>
   );
 };

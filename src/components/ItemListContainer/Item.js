@@ -1,6 +1,9 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
+//Import default img
+import defaultImg from "../../producto-loading.png";
+
 const CardItem = ({ img, name, description }) => {
   return (
     <Card className="text-center" style={{ width: "18rem" }}>
@@ -11,5 +14,9 @@ const CardItem = ({ img, name, description }) => {
       </Card.Body>
     </Card>
   );
+};
+
+CardItem.defaultProps = {
+  img: defaultImg
 };
 export default CardItem;

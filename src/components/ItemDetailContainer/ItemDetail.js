@@ -36,15 +36,21 @@ const ItemDetail = ({ item }) => {
                 initial={1}
                 onAdd={onAdd}
                 callback={callback}
+                cart={cart}
               />
               {cart > 0 && (
                 <div className="container">
                   <Link to="/cart">
-                    <button className="w-100 btn btn-secondary btn-lg btn-block mt-1">
+                    <button className="w-100 btn btn btn-success btn-lg btn-block mt-1">
                       Terminar Compra
                     </button>
                   </Link>
-                  <button onClick={() => removeItem(item.id)}>Eliminar</button>
+                  <button
+                    class="btn btn-outline-success mt-2 w-100"
+                    onClick={() => removeItem(item.id)}
+                  >
+                    Eliminar
+                  </button>
                 </div>
               )}
             </Card.Body>

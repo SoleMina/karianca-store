@@ -33,11 +33,11 @@ const ItemListContainer = () => {
         )
       : setProductos(docs);
     setLoading(false);
-    //Adding setTimeout because fetch loading is too fast
 
-    //setTimeout(() => {
-    //  setLoading(false);
-    //}, 500);
+    //Adding setTimeout because fetch loading is too fast
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
   };
 
   useEffect(() => {

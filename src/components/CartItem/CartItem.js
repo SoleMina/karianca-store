@@ -1,4 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+//Import default img
+import defaultImg from "../../producto-loading.png";
 
 //Import context
 import { useItemsContext } from "../../CartContext";
@@ -15,7 +19,9 @@ const CartItem = ({ item }) => {
         <div className="row">
           <div className="col-md-2 justify-content-center">
             <img src={item.img} alt="Producto" width="100" />
-            <button onClick={() => removeItem(item.id)}>Eliminar</button>
+            <button class="" onClick={() => removeItem(item.id)}>
+              Eliminar
+            </button>
           </div>
           <div className="col-md-2 text-center">
             <p>Product Name:</p>
@@ -37,6 +43,12 @@ const CartItem = ({ item }) => {
       </div>
     </>
   );
+};
+CartItem.propTypes = {
+  saludo: PropTypes.string.isRequired
+};
+CartItem.defaultProps = {
+  item: defaultImg
 };
 
 export default CartItem;
