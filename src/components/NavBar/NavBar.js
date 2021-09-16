@@ -1,7 +1,13 @@
 import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+
+//Import from bootstrap
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+
+//Import icon
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+
+//Import component
 import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {

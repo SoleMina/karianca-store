@@ -18,9 +18,7 @@ export const CartContext = ({ children }) => {
     }
   };
 
-  //const [cartItems, setCartItems] = useState([]);
-
-  //An array of products
+  //Array of products
   const [cartItems, setCartItems] = useState(itemsInLocal);
   //Sum price of all the products in the cart
   const [totalPrice, setTotalPrice] = useState(0);
