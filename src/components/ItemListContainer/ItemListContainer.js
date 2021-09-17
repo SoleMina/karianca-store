@@ -4,7 +4,6 @@ import SpinnerContainer from "../SpinnerContainer/SpinnerContainer";
 import { useParams } from "react-router-dom";
 
 //Import firebase
-
 import { collection, query, getDocs } from "firebase/firestore";
 
 //Import firebase
