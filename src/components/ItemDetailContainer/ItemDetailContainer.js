@@ -25,9 +25,6 @@ const ItemDetailContainer = ({ match }) => {
       docs.push({ ...doc.data(), id: doc.id });
     });
     setItem(docs.find((producto) => producto.id === charID));
-    console.log("ESTE ES EL ITEM", item);
-    console.log("ESTE ES DOCS", docs);
-    console.log("CHARID", charID);
   };
 
   useEffect(() => {
