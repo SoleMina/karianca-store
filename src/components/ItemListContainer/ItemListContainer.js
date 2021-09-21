@@ -26,17 +26,18 @@ const ItemListContainer = () => {
       //console.log(doc.id, "=>", doc.data());
       docs.push({ ...doc.data(), id: doc.id });
     });
-    categoryId
-      ? setProductos(
-          docs.filter((producto) => producto.category === `${categoryId}`)
-        )
-      : setProductos(docs);
-    setLoading(false);
 
-    //Adding setTimeout because fetch loading is too fast
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
+    const resolveProducts = new Promise((resolve, reject) => {
+      resolve(
+        categoryId
+          ? docs.filter((producto) => producto.category === `${categoryId}`)
+          : docs
+      );
+    });
+
+    resolveProducts
+      .then((response) => setProductos(response))
+      .finally(() => setLoading(false));
   };
 
   useEffect(() => {

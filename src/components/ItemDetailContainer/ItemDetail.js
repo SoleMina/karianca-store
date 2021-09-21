@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 
+//Import default img
+import defaultImg from "../../producto-loading.png";
+
 //Import context
 import { useItemsContext } from "../../CartContext";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, AddProduct }) => {
   const [cart, setCart] = useState(0);
-
   const { addToCart, removeItem } = useItemsContext();
 
   //On Add
@@ -37,6 +39,7 @@ const ItemDetail = ({ item }) => {
                 onAdd={onAdd}
                 callback={callback}
                 cart={cart}
+                AddProduct={AddProduct}
               />
               {cart > 0 && (
                 <div className="container">
@@ -46,7 +49,7 @@ const ItemDetail = ({ item }) => {
                     </button>
                   </Link>
                   <button
-                    class="btn btn-outline-success mt-2 w-100"
+                    className="btn btn-outline-success mt-2 w-100"
                     onClick={() => removeItem(item.id)}
                   >
                     Eliminar
@@ -74,6 +77,10 @@ const ItemDetail = ({ item }) => {
       </div>
     </div>
   );
+};
+
+ItemDetail.defaultProps = {
+  img: defaultImg
 };
 
 export default ItemDetail;

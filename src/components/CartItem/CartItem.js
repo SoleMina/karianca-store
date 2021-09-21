@@ -19,7 +19,7 @@ const CartItem = ({ item }) => {
         <div className="row">
           <div className="col-md-2 justify-content-center">
             <img src={item.img} alt="Producto" width="100" />
-            <button class="" onClick={() => removeItem(item.id)}>
+            <button className="" onClick={() => removeItem(item.id)}>
               Eliminar
             </button>
           </div>
@@ -43,9 +43,6 @@ const CartItem = ({ item }) => {
       </div>
     </>
   );
-};
-CartItem.propTypes = {
-  saludo: PropTypes.string.isRequired
 };
 CartItem.defaultProps = {
   item: defaultImg

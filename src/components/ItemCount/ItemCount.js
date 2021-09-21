@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 
-export const ItemCount = ({ stock, initial, onAdd, cart, callback }) => {
+export const ItemCount = ({
+  stock,
+  initial,
+  onAdd,
+  cart,
+  callback,
+  AddProduct
+}) => {
   const [counter, setCounter] = useState(initial);
 
   //Increment Counter
@@ -22,7 +29,10 @@ export const ItemCount = ({ stock, initial, onAdd, cart, callback }) => {
       </div>
       {cart === 0 && (
         <button
-          onClick={() => onAdd(counter)}
+          onClick={() => {
+            onAdd(counter);
+            AddProduct();
+          }}
           className="w-100 btn btn-secondary btn-lg btn-block mt-1"
         >
           Agregar al carrito
