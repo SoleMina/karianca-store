@@ -25,7 +25,7 @@ const FormUser = () => {
       email === "karina@gmail.com" &&
       password === "1234"
     ) {
-      alert("TERMINADOOOO");
+      alert("LOGIN FINISHED");
       history.push("/cart");
     }
   };

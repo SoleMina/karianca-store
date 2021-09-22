@@ -4,5 +4,6 @@
 .text-right {
   text-align: right;
 }
-.btn-cart-404 {
+.h-100 {
+  min-height: 100vh;
 }

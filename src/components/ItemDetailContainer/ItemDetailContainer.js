@@ -20,7 +20,7 @@ import { useItemsContext } from "../../CartContext";
 const ItemDetailContainer = ({ match }) => {
   let charID = match.params.id;
   const [item, setItem] = useState([]);
-  const { totalProducts } = useItemsContext();
+  const { totalPrice } = useItemsContext();
 
   //Traernos los productos
   const getProducts = async () => {
@@ -53,7 +53,7 @@ const ItemDetailContainer = ({ match }) => {
       },
       item: item,
       date: Timestamp.fromDate(new Date()),
-      total: totalProducts
+      total: totalPrice > 0 && totalPrice
     };
 
     await setDoc(doc(comprasRef), object);

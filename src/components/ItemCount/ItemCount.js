@@ -61,8 +61,10 @@ export const ItemCount = ({
           onClick={() => {
             {
               onAdd(counter);
-              AddProduct("Karina", "123456654", "karina@gmail.com");
-              handleShow();
+              if (counter > 0) {
+                AddProduct("Karina", "123456654", "karina@gmail.com");
+                handleShow();
+              }
             }
           }}
           className="w-100 btn btn-secondary btn-lg btn-block mt-1"
