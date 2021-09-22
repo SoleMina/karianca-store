@@ -11,11 +11,10 @@ import "./FormUser.css";
 import { useItemsContext } from "../../CartContext";
 
 const FormUser = () => {
+  const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
-
-  const { user, setUser } = useItemsContext();
 
   console.log("USUARIO", user);
 

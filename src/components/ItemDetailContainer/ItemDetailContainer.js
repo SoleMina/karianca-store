@@ -44,7 +44,6 @@ const ItemDetailContainer = ({ match }) => {
   const AddProduct = async (buyerName, buyerPhone, buyerEmail) => {
     const comprasRef = collection(db, "comprar");
     console.log("THISSSS", item);
-
     const object = {
       buyer: {
         name: buyerName,
@@ -57,7 +56,6 @@ const ItemDetailContainer = ({ match }) => {
     };
 
     await setDoc(doc(comprasRef), object);
-
     console.log("Producto agregado!!!!");
   };
 
