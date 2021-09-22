@@ -2,14 +2,25 @@ import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 
 //Import firebase
-import { collection, query, getDocs, setDoc, doc } from "firebase/firestore";
+import {
+  collection,
+  query,
+  getDocs,
+  setDoc,
+  doc,
+  Timestamp
+} from "firebase/firestore";
 
 //Import db
 import { db } from "../../firebase";
 
+//Import context
+import { useItemsContext } from "../../CartContext";
+
 const ItemDetailContainer = ({ match }) => {
   let charID = match.params.id;
   const [item, setItem] = useState([]);
+  const { totalProducts } = useItemsContext();
 
   //Traernos los productos
   const getProducts = async () => {
@@ -30,15 +41,19 @@ const ItemDetailContainer = ({ match }) => {
   };
 
   //
-  const AddProduct = async () => {
+  const AddProduct = async (buyerName, buyerPhone, buyerEmail) => {
     const comprasRef = collection(db, "comprar");
+    console.log("THISSSS", item);
 
     const object = {
-      title: "Laptop Gamer II",
-      description: "This is a powerful machine with high quality",
-      price: 2500,
-      stock: 20,
-      category: "laptop"
+      buyer: {
+        name: buyerName,
+        phone: buyerPhone,
+        email: buyerEmail
+      },
+      item: item,
+      date: Timestamp.fromDate(new Date()),
+      total: totalProducts
     };
 
     await setDoc(doc(comprasRef), object);

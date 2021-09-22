@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
@@ -13,6 +13,7 @@ const ItemDetail = ({ item, AddProduct }) => {
   const [cart, setCart] = useState(0);
   const { addToCart, removeItem } = useItemsContext();
 
+  console.log("LARGO", item.length);
   //On Add
   const onAdd = (quantityToAdd) => {
     setCart(quantityToAdd);
@@ -43,7 +44,8 @@ const ItemDetail = ({ item, AddProduct }) => {
               />
               {cart > 0 && (
                 <div className="container">
-                  <Link to="/cart">
+                  <Link to="/FormUser">
+                    {/*<Link to="/cart">*/}
                     <button className="w-100 btn btn btn-success btn-lg btn-block mt-1">
                       Terminar Compra
                     </button>

@@ -15,6 +15,7 @@ import Home from "./views/Home/Home";
 
 //Importar Provider y envolver nuestra app
 import { CartContext } from "./CartContext";
+import FormUser from "./components/FormUser/FormUser";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/item/:id" component={ItemDetailContainer} />
             <Route path="/category/:categoryId" component={ItemListContainer} />
             <Route path="/cart" component={Cart} />
+            <Route path="/FormUser" component={FormUser} />
           </Switch>
         </div>
         <Footer />
