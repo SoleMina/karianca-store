@@ -30,9 +30,9 @@ const FormUser = () => {
     }
   };
   return (
-    <div>
+    <div className="form-user">
       <div className="container-form pt-5 pb-5">
-        <h3 className="pt-2 pb-4">LOGIN</h3>
+        <h2 className="pt-3 pb-5 font-weight-bold">LOGIN</h2>
         <Form
           className="pb-5"
           onSubmit={onSubmit}
@@ -59,7 +59,7 @@ const FormUser = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formGroupPassword">
+          <Form.Group className="mb-4" controlId="formGroupPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
@@ -68,10 +68,8 @@ const FormUser = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-          <p className="pb-4 pt-4">*Please complete all the blank spaces</p>
+          <input className="btn-login mb-4" type="submit" placeholder="Send" />
+          <p className="pb-5 pt-4">*Please complete all the blank spaces</p>
         </Form>
       </div>
     </div>

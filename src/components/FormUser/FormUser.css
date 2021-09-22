@@ -1,4 +1,15 @@
 .container-form {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
+}
+.form-user {
+  background-color: #0b8190;
+  color: white;
+}
+.btn-login {
+  background-color: #07374a;
+  color: white;
+  padding: 1% 2.5%;
+  border: none;
+  border-radius: 4px;
 }
