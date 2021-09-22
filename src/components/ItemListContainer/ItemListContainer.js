@@ -49,7 +49,7 @@ const ItemListContainer = () => {
       {loading ? (
         <SpinnerContainer />
       ) : (
-        <div className="row">
+        <div className="row" style={{ minHeight: "100vh" }}>
           <ItemList productos={productos} />
         </div>
       )}

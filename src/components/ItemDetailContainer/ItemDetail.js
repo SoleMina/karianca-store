@@ -27,8 +27,8 @@ const ItemDetail = ({ item, AddProduct }) => {
   };
 
   return (
-    <div className="container mb-4 hv-85">
-      <div className="row">
+    <div className="container mb-4">
+      <div className="row hv-85">
         <div className="col-md-6 d-flex justify-content-center">
           <Card className="text-center" style={{ width: "18rem" }}>
             <Card.Img variant="top" src={item.img} alt="Producto" />
