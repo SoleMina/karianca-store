@@ -3,6 +3,9 @@ import React, { useState } from "react";
 //Import from bootstrap
 import { Modal } from "react-bootstrap";
 
+//Import context
+import { useItemsContext } from "../../CartContext";
+
 export const ItemCount = ({
   stock,
   initial,
@@ -61,10 +64,8 @@ export const ItemCount = ({
           onClick={() => {
             {
               onAdd(counter);
-              if (counter > 0) {
-                AddProduct("Karina", "123456654", "karina@gmail.com");
-                handleShow();
-              }
+              AddProduct("karina", "1234", "karina@gmail.com");
+              handleShow();
             }
           }}
           className="w-100 btn btn-secondary btn-lg btn-block mt-1"

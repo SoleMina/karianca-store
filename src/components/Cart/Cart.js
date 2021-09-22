@@ -3,7 +3,7 @@ import { useItemsContext } from "../../CartContext";
 import CartItem from "../CartItem/CartItem";
 import { Link } from "react-router-dom";
 
-//Estilo
+//Estilos
 import "./Cart.css";
 
 const Cart = () => {
@@ -11,7 +11,6 @@ const Cart = () => {
   return (
     <div className={`h-100 ${cartItems.length > 0 ? "bg-gray" : ""}`}>
       <h1 className="text-center pt-4 mb-4">Productos de Compra</h1>
-      {/*<div>Producto: {cartItems.length > 0 && cartItems[0].title}</div>*/}
       {cartItems.length > 0 ? (
         <div>
           {cartItems.map((item) => {

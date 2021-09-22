@@ -53,7 +53,7 @@ const ItemDetailContainer = ({ match }) => {
       },
       item: item,
       date: Timestamp.fromDate(new Date()),
-      total: totalPrice > 0 && totalPrice
+      total: totalPrice
     };
 
     await setDoc(doc(comprasRef), object);

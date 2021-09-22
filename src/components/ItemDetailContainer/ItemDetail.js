@@ -45,7 +45,6 @@ const ItemDetail = ({ item, AddProduct }) => {
               {cart > 0 && (
                 <div className="container">
                   <Link to="/FormUser">
-                    {/*<Link to="/cart">*/}
                     <button className="w-100 btn btn btn-success btn-lg btn-block mt-1">
                       Terminar Compra
                     </button>

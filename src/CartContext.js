@@ -25,6 +25,8 @@ export const CartContext = ({ children }) => {
   //Sum of products in the cart
   const [totalProducts, setTotalProducts] = useState(0);
 
+  const [user, setUser] = useState("");
+
   console.log("CART ITEMS", cartItems);
   const isInCart = (id) => cartItems.some((e) => e.id === id);
 
@@ -82,7 +84,9 @@ export const CartContext = ({ children }) => {
         clear,
         itemsInLocal,
         totalPrice,
-        totalProducts
+        totalProducts,
+        user,
+        setUser
       }}
     >
       {children}
