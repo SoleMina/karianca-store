@@ -32,7 +32,7 @@ const FormUser = () => {
   return (
     <div className="form-user">
       <div className="container-form pt-5 pb-5">
-        <h2 className="pt-3 pb-5 font-weight-bold">LOGIN</h2>
+        <h2 className="pt-3 pb-3 font-weight-bold">LOGIN</h2>
         <Form
           className="pb-5"
           onSubmit={onSubmit}
@@ -69,7 +69,7 @@ const FormUser = () => {
             />
           </Form.Group>
           <input className="btn-login mb-4" type="submit" placeholder="Send" />
-          <p className="pb-5 pt-4">*Please complete all the blank spaces</p>
+          <p className="pb-4 pt-4">*Please complete all the blank spaces</p>
         </Form>
       </div>
     </div>

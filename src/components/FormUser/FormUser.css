@@ -1,10 +1,12 @@
 .container-form {
   width: 40%;
   margin: 0 auto;
+  background: white;
+  padding: 3%;
 }
 .form-user {
   background-color: #0b8190;
-  color: white;
+  padding: 2%;
 }
 .btn-login {
   background-color: #07374a;
@@ -12,4 +14,10 @@
   padding: 1% 2.5%;
   border: none;
   border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .container-form {
+    width: 80%;
+  }
 }
