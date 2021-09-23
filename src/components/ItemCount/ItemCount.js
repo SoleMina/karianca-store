@@ -64,7 +64,7 @@ export const ItemCount = ({
           onClick={() => {
             {
               onAdd(counter);
-              AddProduct("karina", "1234", "karina@gmail.com");
+              AddProduct("karina", "992086777", "karina@gmail.com");
               handleShow();
             }
           }}

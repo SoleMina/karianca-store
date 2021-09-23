@@ -13,6 +13,7 @@ import { useItemsContext } from "../../CartContext";
 const FormUser = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
 
@@ -34,7 +35,7 @@ const FormUser = () => {
       <div className="container-form pt-5 pb-5">
         <h2 className="pt-3 pb-3 font-weight-bold">LOGIN</h2>
         <Form
-          className="pb-5"
+          className="pb-3"
           onSubmit={onSubmit}
           action={`/cart`}
           method="post"
@@ -47,6 +48,16 @@ const FormUser = () => {
               placeholder="Enter Name"
               value={user}
               onChange={(e) => setUser(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formGroupEmail">
+            <Form.Label>Phone</Form.Label>
+            <Form.Control
+              name="phone"
+              type="text"
+              placeholder="Enter Phone Number"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
           </Form.Group>
 
@@ -69,7 +80,7 @@ const FormUser = () => {
             />
           </Form.Group>
           <input className="btn-login mb-4" type="submit" placeholder="Send" />
-          <p className="pb-4 pt-4">*Please complete all the blank spaces</p>
+          <p className="pt-4">*Please complete all the blank spaces</p>
         </Form>
       </div>
     </div>
