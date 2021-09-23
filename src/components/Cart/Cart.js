@@ -21,6 +21,9 @@ const Cart = () => {
               <div className="col-md-12 text-center">
                 Monto Total:
                 <p>S/. {totalPrice}</p>
+                <Link to={`/FormUser`} className="btn btn-primary">
+                  Finalize your purchase
+                </Link>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ import defaultImg from "../../producto-loading.png";
 //Import context
 import { useItemsContext } from "../../CartContext";
 
-const ItemDetail = ({ item, AddProduct }) => {
+const ItemDetail = ({ item }) => {
   const [cart, setCart] = useState(0);
   const { addToCart, removeItem } = useItemsContext();
 
@@ -40,11 +40,10 @@ const ItemDetail = ({ item, AddProduct }) => {
                 onAdd={onAdd}
                 callback={callback}
                 cart={cart}
-                AddProduct={AddProduct}
               />
               {cart > 0 && (
                 <div className="container">
-                  <Link to="/FormUser">
+                  <Link to="/cart">
                     <button className="w-100 btn btn btn-success btn-lg btn-block mt-1">
                       Terminar Compra
                     </button>

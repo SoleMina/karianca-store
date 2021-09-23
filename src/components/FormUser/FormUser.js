@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 //Import from bootstrap
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 //Import form style
 import "./FormUser.css";
@@ -17,17 +17,13 @@ const FormUser = () => {
   const [password, setPassword] = useState("");
   const history = useHistory();
 
-  console.log("USUARIO", user);
+  const { totalPrice, AddProduct, item } = useItemsContext();
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (
-      user === "karina" &&
-      email === "karina@gmail.com" &&
-      password === "1234"
-    ) {
+    if (user.length > 3 && email.length > 5) {
       alert("LOGIN FINISHED");
-      history.push("/cart");
+      history.push("/orders");
     }
   };
   return (
@@ -37,7 +33,7 @@ const FormUser = () => {
         <Form
           className="pb-3"
           onSubmit={onSubmit}
-          action={`/cart`}
+          action={`/orders`}
           method="post"
         >
           <Form.Group className="mb-3" controlId="formGroupEmail">
@@ -45,6 +41,8 @@ const FormUser = () => {
             <Form.Control
               name="user"
               type="text"
+              minLength={3}
+              maxLength={20}
               placeholder="Enter Name"
               value={user}
               onChange={(e) => setUser(e.target.value)}
@@ -56,6 +54,8 @@ const FormUser = () => {
               name="phone"
               type="text"
               placeholder="Enter Phone Number"
+              min={7}
+              max={10}
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
@@ -66,6 +66,8 @@ const FormUser = () => {
             <Form.Control
               type="email"
               placeholder="Enter email"
+              minLength={10}
+              maxLength={20}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -76,10 +78,17 @@ const FormUser = () => {
               type="password"
               placeholder="Password"
               value={password}
+              minLength={3}
+              maxLength={20}
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-          <input className="btn-login mb-4" type="submit" placeholder="Send" />
+          <input
+            className="btn-login mb-4"
+            type="submit"
+            placeholder="Send"
+            onClick={() => AddProduct(user, phone, email, item, totalPrice)}
+          />
           <p className="pt-4">*Please complete all the blank spaces</p>
         </Form>
       </div>

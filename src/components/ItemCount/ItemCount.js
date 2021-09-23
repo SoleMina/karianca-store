@@ -3,17 +3,7 @@ import React, { useState } from "react";
 //Import from bootstrap
 import { Modal } from "react-bootstrap";
 
-//Import context
-import { useItemsContext } from "../../CartContext";
-
-export const ItemCount = ({
-  stock,
-  initial,
-  onAdd,
-  cart,
-  callback,
-  AddProduct
-}) => {
+export const ItemCount = ({ stock, initial, onAdd, cart, callback }) => {
   const [counter, setCounter] = useState(initial);
   const [show, setShow] = useState(false);
   const [completed, setCompleted] = useState(10);
@@ -64,7 +54,6 @@ export const ItemCount = ({
           onClick={() => {
             {
               onAdd(counter);
-              AddProduct("karina", "992086777", "karina@gmail.com");
               handleShow();
             }
           }}

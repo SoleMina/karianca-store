@@ -19,8 +19,7 @@ import { useItemsContext } from "../../CartContext";
 
 const ItemDetailContainer = ({ match }) => {
   let charID = match.params.id;
-  const [item, setItem] = useState([]);
-  const { totalPrice } = useItemsContext();
+  const { item, setItem } = useItemsContext();
 
   //Traernos los productos
   const getProducts = async () => {
@@ -36,34 +35,13 @@ const ItemDetailContainer = ({ match }) => {
     });
     setItem(docs.find((producto) => producto.id === charID));
     console.log("ESTE ES EL ITEM", item);
-    console.log("ESTE ES DOCS", docs);
-    console.log("CHARID", charID);
-  };
-
-  //
-  const AddProduct = async (buyerName, buyerPhone, buyerEmail) => {
-    const comprasRef = collection(db, "comprar");
-    console.log("THISSSS", item);
-    const object = {
-      buyer: {
-        name: buyerName,
-        phone: buyerPhone,
-        email: buyerEmail
-      },
-      item: item,
-      date: Timestamp.fromDate(new Date()),
-      total: totalPrice
-    };
-
-    await setDoc(doc(comprasRef), object);
-    console.log("Producto agregado!!!!");
   };
 
   useEffect(() => {
     getProducts();
   }, [charID]);
 
-  return <ItemDetail item={item} AddProduct={AddProduct} />;
+  return <ItemDetail item={item} />;
 };
 
 export default ItemDetailContainer;

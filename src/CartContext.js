@@ -1,5 +1,18 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
 
+//Import firebase
+import {
+  collection,
+  query,
+  getDocs,
+  setDoc,
+  doc,
+  Timestamp
+} from "firebase/firestore";
+
+//Import db
+import { db } from "./firebase";
+
 //.- CREAR EL CONTEXTO
 export const ItemsContext = createContext({});
 //export const ItemsContext =  createContext();
@@ -24,8 +37,9 @@ export const CartContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   //Sum of products in the cart
   const [totalProducts, setTotalProducts] = useState(0);
+  //
+  const [item, setItem] = useState([]);
 
-  console.log("CART ITEMS", cartItems);
   const isInCart = (id) => cartItems.some((e) => e.id === id);
 
   //Add product to array
@@ -72,6 +86,30 @@ export const CartContext = ({ children }) => {
     getPrice();
   });
 
+  //Add Product to firebase with Form
+  const AddProduct = async (
+    buyerName,
+    buyerPhone,
+    buyerEmail,
+    item,
+    totalPrice
+  ) => {
+    const comprasRef = collection(db, "comprar");
+    const object = {
+      buyer: {
+        name: buyerName,
+        phone: buyerPhone,
+        email: buyerEmail
+      },
+      item: item,
+      date: Timestamp.fromDate(new Date()),
+      total: totalPrice
+    };
+
+    await setDoc(doc(comprasRef), object);
+    console.log("Producto agregado!!!!");
+  };
+
   //REETURNCONTEXT WITH A .PROVIDER
   return (
     <ItemsContext.Provider
@@ -82,7 +120,10 @@ export const CartContext = ({ children }) => {
         clear,
         itemsInLocal,
         totalPrice,
-        totalProducts
+        totalProducts,
+        AddProduct,
+        item,
+        setItem
       }}
     >
       {children}
