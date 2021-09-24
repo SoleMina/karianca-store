@@ -14,7 +14,7 @@ const CartItem = ({ item }) => {
 
   return (
     <>
-      <div className="cart-item">
+      <div className="cart-item text-center">
         <div className="row">
           <div className="col-md-2 justify-content-center">
             <img src={item.img} alt="Producto" width="100" />
@@ -22,7 +22,7 @@ const CartItem = ({ item }) => {
               Eliminar
             </button>
           </div>
-          <div className="col-md-2 text-center">
+          <div className="col-md-2">
             <p>Product Name:</p>
             <h5>{item.title}</h5>
           </div>

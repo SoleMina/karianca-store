@@ -19,6 +19,7 @@ const ItemDetail = ({ item }) => {
     setCart(quantityToAdd);
     addToCart(item, quantityToAdd);
     console.log(`Se ha añadido ${quantityToAdd} productos`);
+    console.log("SETCART", cart);
   };
 
   //Testing callback

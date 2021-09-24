@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 //Import from bootstrap
@@ -17,15 +17,28 @@ const FormUser = () => {
   const [password, setPassword] = useState("");
   const history = useHistory();
 
-  const { totalPrice, AddProduct, item } = useItemsContext();
+  const {
+    totalPrice,
+    AddProduct,
+    cartItems,
+    removeItem,
+    totalProducts,
+    order,
+    setOrders,
+    lastOrder
+  } = useItemsContext();
 
   const onSubmit = (e) => {
     e.preventDefault();
     if (user.length > 3 && email.length > 5) {
+      setOrders(true);
+      removeItem();
+      lastOrder();
       alert("LOGIN FINISHED");
       history.push("/orders");
     }
   };
+
   return (
     <div className="form-user">
       <div className="container-form pt-5 pb-5">
@@ -66,8 +79,8 @@ const FormUser = () => {
             <Form.Control
               type="email"
               placeholder="Enter email"
-              minLength={10}
-              maxLength={20}
+              minLength={15}
+              maxLength={50}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -87,7 +100,9 @@ const FormUser = () => {
             className="btn-login mb-4"
             type="submit"
             placeholder="Send"
-            onClick={() => AddProduct(user, phone, email, item, totalPrice)}
+            onClick={() =>
+              AddProduct(user, phone, email, cartItems, totalPrice)
+            }
           />
           <p className="pt-4">*Please complete all the blank spaces</p>
         </Form>

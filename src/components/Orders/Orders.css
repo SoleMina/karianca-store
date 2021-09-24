@@ -1,0 +1,9 @@
+.w-bold {
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .img-orders {
+    width: 100%;
+  }
+}

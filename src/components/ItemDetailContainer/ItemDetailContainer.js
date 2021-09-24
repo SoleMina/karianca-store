@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
+import SpinnerContainer from "../SpinnerContainer/SpinnerContainer";
 
 //Import firebase
-import {
-  collection,
-  query,
-  getDocs,
-  setDoc,
-  doc,
-  Timestamp
-} from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 
 //Import db
 import { db } from "../../firebase";
@@ -19,7 +13,7 @@ import { useItemsContext } from "../../CartContext";
 
 const ItemDetailContainer = ({ match }) => {
   let charID = match.params.id;
-  const { item, setItem } = useItemsContext();
+  const { item, setItem, order, setOrders } = useItemsContext();
 
   //Traernos los productos
   const getProducts = async () => {
@@ -30,7 +24,6 @@ const ItemDetailContainer = ({ match }) => {
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-      //console.log(doc.id, "=>", doc.data());
       docs.push({ ...doc.data(), id: doc.id });
     });
     setItem(docs.find((producto) => producto.id === charID));
@@ -39,9 +32,10 @@ const ItemDetailContainer = ({ match }) => {
 
   useEffect(() => {
     getProducts();
+    setOrders(false);
   }, [charID]);
 
-  return <ItemDetail item={item} />;
+  return <>{item.id ? <ItemDetail item={item} /> : <SpinnerContainer />}</>;
 };
 
 export default ItemDetailContainer;

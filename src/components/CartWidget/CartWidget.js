@@ -10,12 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./CartWidget.css";
 
 const CartWidget = (props) => {
-  const { cartItems, totalProducts } = useItemsContext();
+  const { cartItems, totalProducts, order } = useItemsContext();
   return (
     <div>
       <FontAwesomeIcon icon={props.icon} data-count="0" />
       <span className="cart-counter">
-        {cartItems.length > 0 ? totalProducts : 0}
+        {cartItems.length > 0 && order == false ? totalProducts : 0}
       </span>
     </div>
   );

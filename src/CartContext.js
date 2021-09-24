@@ -5,8 +5,12 @@ import {
   collection,
   query,
   getDocs,
+  getDoc,
   setDoc,
+  where,
   doc,
+  orderBy,
+  limit,
   Timestamp
 } from "firebase/firestore";
 
@@ -37,8 +41,22 @@ export const CartContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   //Sum of products in the cart
   const [totalProducts, setTotalProducts] = useState(0);
-  //
+  //Item
   const [item, setItem] = useState([]);
+  //Order
+  const [order, setOrders] = useState(false);
+  //OrderiD (TicketId)
+  const [orderId, setOrderId] = useState([]);
+
+  const ordersPurchase = () => {
+    if (order == false) {
+      setOrders(true);
+      setTotalProducts(0);
+    } else {
+      setOrders(false);
+      setTotalProducts(0);
+    }
+  };
 
   const isInCart = (id) => cartItems.some((e) => e.id === id);
 
@@ -91,7 +109,7 @@ export const CartContext = ({ children }) => {
     buyerName,
     buyerPhone,
     buyerEmail,
-    item,
+    cartItems,
     totalPrice
   ) => {
     const comprasRef = collection(db, "comprar");
@@ -101,7 +119,7 @@ export const CartContext = ({ children }) => {
         phone: buyerPhone,
         email: buyerEmail
       },
-      item: item,
+      item: cartItems,
       date: Timestamp.fromDate(new Date()),
       total: totalPrice
     };
@@ -109,21 +127,45 @@ export const CartContext = ({ children }) => {
     await setDoc(doc(comprasRef), object);
     console.log("Producto agregado!!!!");
   };
+  const lastOrder = async () => {
+    const arrayComprar = [];
+    const q = query(
+      collection(db, "comprar"),
+      orderBy("date", "desc"),
+      limit(1)
+    );
+
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      arrayComprar.push(doc.id);
+    });
+    setOrderId([...arrayComprar]);
+    return orderId;
+  };
 
   //REETURNCONTEXT WITH A .PROVIDER
   return (
     <ItemsContext.Provider
       value={{
         cartItems,
+        setCartItems,
         addToCart,
         removeItem,
         clear,
         itemsInLocal,
         totalPrice,
-        totalProducts,
         AddProduct,
         item,
-        setItem
+        setItem,
+        totalProducts,
+        setTotalProducts,
+        ordersPurchase,
+        order,
+        setOrders,
+        isInCart,
+        lastOrder,
+        orderId
       }}
     >
       {children}
