@@ -2,22 +2,17 @@ import React, { useState } from "react";
 
 //Import from bootstrap
 import { Modal } from "react-bootstrap";
+import "./ItemCount.css";
 
 export const ItemCount = ({ stock, initial, onAdd, cart, callback }) => {
   const [counter, setCounter] = useState(initial);
   const [show, setShow] = useState(false);
-  const [completed, setCompleted] = useState(10);
 
   const handleShow = () => {
     setShow(true);
-    setCompleted(50);
-    setTimeout(() => {
-      setCompleted(80);
-    }, 500);
     setTimeout(() => {
       setShow(false);
-      setCompleted(100);
-    }, 1400);
+    }, 1000);
   };
 
   //Increment Counter
@@ -41,9 +36,9 @@ export const ItemCount = ({ stock, initial, onAdd, cart, callback }) => {
       <Modal show={show}>
         <Modal.Body>El producto ha sido agregado exitosamente!</Modal.Body>
         <div
-          className="progress-div"
+          className="progress-div `${show ? 'completeWidth' : ''}`"
           style={{
-            width: completed + "%",
+            animation: "completeWidth 1s ease-out",
             backgroundColor: "blue",
             height: "10px"
           }}

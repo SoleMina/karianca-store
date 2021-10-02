@@ -1,0 +1,14 @@
+@keyframes completeWidth {
+  0% {
+    width: 10%;
+  }
+  50% {
+    width: 50%;
+  }
+  80% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}

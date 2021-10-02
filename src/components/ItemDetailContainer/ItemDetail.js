@@ -13,6 +13,8 @@ const ItemDetail = ({ item }) => {
   const [cart, setCart] = useState(0);
   const { addToCart, removeItem } = useItemsContext();
 
+  const { updateItems } = useItemsContext();
+
   console.log("LARGO", item.length);
   //On Add
   const onAdd = (quantityToAdd) => {
@@ -64,7 +66,7 @@ const ItemDetail = ({ item }) => {
           <h1 className="pt-4 text-center">{item.title} </h1>
           <h5>Stock: {item.stock}</h5>
           <h5>Category: {item.category}</h5>
-          <h5>Price: {item.price}</h5>
+          <h5>Price: S/ {item.price}</h5>
           <p>
             <b>Description:</b> {item.description}
           </p>

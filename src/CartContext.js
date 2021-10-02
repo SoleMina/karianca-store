@@ -5,9 +5,7 @@ import {
   collection,
   query,
   getDocs,
-  getDoc,
   setDoc,
-  where,
   doc,
   orderBy,
   limit,
@@ -49,7 +47,7 @@ export const CartContext = ({ children }) => {
   const [orderId, setOrderId] = useState([]);
 
   const ordersPurchase = () => {
-    if (order == false) {
+    if (order === false) {
       setOrders(true);
       setTotalProducts(0);
     } else {
@@ -81,6 +79,11 @@ export const CartContext = ({ children }) => {
 
   //Clear all the array to empty
   const clear = () => setCartItems([]);
+
+  //Change order state
+  const orderTrue = () => setOrders(true);
+  const orderFalse = () => setOrders(false);
+  //const orderChange = () => setOrders(!order);
 
   //Update the ammount of Products in the cart
   const updateItems = () => {
@@ -162,7 +165,8 @@ export const CartContext = ({ children }) => {
         setTotalProducts,
         ordersPurchase,
         order,
-        setOrders,
+        orderTrue,
+        orderFalse,
         isInCart,
         lastOrder,
         orderId

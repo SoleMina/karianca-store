@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 //Import from bootstrap
@@ -6,6 +6,9 @@ import { Form } from "react-bootstrap";
 
 //Import form style
 import "./FormUser.css";
+
+//import SocialMediaAuth
+import SocialMediaAuthComponent from "../SocialMediaAuth/SocialMediaAuth";
 
 //Import context
 import { useItemsContext } from "../../CartContext";
@@ -22,19 +25,16 @@ const FormUser = () => {
     AddProduct,
     cartItems,
     removeItem,
-    totalProducts,
-    order,
-    setOrders,
+    orderTrue,
     lastOrder
   } = useItemsContext();
 
   const onSubmit = (e) => {
     e.preventDefault();
     if (user.length > 3 && email.length > 5) {
-      setOrders(true);
+      orderTrue();
       removeItem();
       lastOrder();
-      alert("LOGIN FINISHED");
       history.push("/orders");
     }
   };
@@ -104,6 +104,8 @@ const FormUser = () => {
               AddProduct(user, phone, email, cartItems, totalPrice)
             }
           />
+          <br />
+          <SocialMediaAuthComponent />
           <p className="pt-4">*Please complete all the blank spaces</p>
         </Form>
       </div>

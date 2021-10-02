@@ -44,7 +44,7 @@ const Orders = () => {
           <div className="col-md-4 text-center">
             {ticket
               ? cartItems.map((item) => {
-                  return <span>{"-" + item.title + " "}</span>;
+                  return <span key={item.title}>{"-" + item.title + " "}</span>;
                 })
               : ""}
           </div>

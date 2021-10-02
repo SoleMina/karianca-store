@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import SpinnerContainer from "../SpinnerContainer/SpinnerContainer";
 
@@ -13,7 +13,7 @@ import { useItemsContext } from "../../CartContext";
 
 const ItemDetailContainer = ({ match }) => {
   let charID = match.params.id;
-  const { item, setItem, order, setOrders } = useItemsContext();
+  const { item, setItem, orderFalse } = useItemsContext();
 
   //Traernos los productos
   const getProducts = async () => {
@@ -32,7 +32,7 @@ const ItemDetailContainer = ({ match }) => {
 
   useEffect(() => {
     getProducts();
-    setOrders(false);
+    orderFalse();
   }, [charID]);
 
   return <>{item.id ? <ItemDetail item={item} /> : <SpinnerContainer />}</>;
