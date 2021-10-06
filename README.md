@@ -28,4 +28,4 @@ En el proyecto son:
 
 ## Proyecto visual
 
-<img src="images/e-commerce.gif" />
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/images/e-commerce.gif?raw=true)
