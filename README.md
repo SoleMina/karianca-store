@@ -28,4 +28,4 @@ En el proyecto son:
 
 ## Proyecto visual
 
-![alt text](https://github.com/[SoleMina]/[karianca-store]/blob/[main]/images/e-commerce.gif?raw=true)
+![gif E-commerce](https://raw.githubusercontent.com/SoleMina/karianca-store/main/public/images/e-commerce.gif)
