@@ -16,7 +16,9 @@ productos, fontawesome para los íconos, react-router-dom para las páginas indi
 
 ## Hooks utilizados
 
--useState
+<ul>
+<li>-useState</li>
+</ul>
 -useEffect
 -useParams
 -useHistory
