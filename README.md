@@ -6,16 +6,18 @@ se implementó promesas, conditional rendering, etc.
 Todos los productos se encuentran alojados en Firestore y las ordenes generadas en la página
 se guardan ahí también.
 
-En el homepage se muestran todos los productos, también en el menú se habilitó un dropdown para
+En el homepage se muestran todos los productos, además, en el menú se habilitó un dropdown para
 mostrar productos por categoría.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
 
 ## Se aplicaron dependencias como
 
 Boostrap para la construcción de componentes reutilizables, firebase para guardar los datos de los
 productos, fontawesome para los íconos, react-router-dom para las páginas individuales, entre otros.
+
+## Hooks utilizados
+
+-useState
+-useEffect
+-useParams
+-useHistory
+-useContext
