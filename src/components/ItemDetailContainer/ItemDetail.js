@@ -13,15 +13,12 @@ const ItemDetail = ({ item }) => {
   const [cart, setCart] = useState(0);
   const { addToCart, removeItem } = useItemsContext();
 
-  const { updateItems } = useItemsContext();
-
   console.log("LARGO", item.length);
   //On Add
   const onAdd = (quantityToAdd) => {
     setCart(quantityToAdd);
     addToCart(item, quantityToAdd);
     console.log(`Se ha añadido ${quantityToAdd} productos`);
-    console.log("SETCART", cart);
   };
 
   //Testing callback

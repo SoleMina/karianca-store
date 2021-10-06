@@ -62,13 +62,17 @@ const SocialMediaAuthComponent = () => {
     history.push("/orders");
   };
   return (
-    <button
-      className="btn btn-primary"
-      type="submit"
-      onClick={() => loginSocial(facebookProvider)}
-    >
-      Facebook
-    </button>
+    <>
+      <p>Log In with your Facebook Profile: </p>
+      <button
+        className="btn"
+        style={{ backgroundColor: "#3b5998", color: "white" }}
+        type="submit"
+        onClick={() => loginSocial(facebookProvider)}
+      >
+        Facebook
+      </button>
+    </>
   );
 };
 

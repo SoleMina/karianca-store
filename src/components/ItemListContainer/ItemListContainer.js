@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import SpinnerContainer from "../SpinnerContainer/SpinnerContainer";
 import { useParams } from "react-router-dom";
+import bannerHome from "../../online-shop.png";
 
 //Import firebase
 import { collection, query, getDocs } from "firebase/firestore";
@@ -47,9 +48,16 @@ const ItemListContainer = () => {
   return (
     <>
       {loading ? (
-        <SpinnerContainer />
+        <SpinnerContainer text="Loading products..." />
       ) : (
         <div className="row" style={{ minHeight: "100vh" }}>
+          {categoryId ? (
+            <div>
+              <h1 className="text-center pt-4 pb-4">{categoryId}</h1>
+            </div>
+          ) : (
+            <img src={bannerHome} height="450" style={{ objectFit: "cover" }} />
+          )}
           <ItemList productos={productos} />
         </div>
       )}

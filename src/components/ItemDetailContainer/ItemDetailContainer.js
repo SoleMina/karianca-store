@@ -35,7 +35,15 @@ const ItemDetailContainer = ({ match }) => {
     orderFalse();
   }, [charID]);
 
-  return <>{item.id ? <ItemDetail item={item} /> : <SpinnerContainer />}</>;
+  return (
+    <>
+      {item.id ? (
+        <ItemDetail item={item} />
+      ) : (
+        <SpinnerContainer text="Loading products..." />
+      )}
+    </>
+  );
 };
 
 export default ItemDetailContainer;

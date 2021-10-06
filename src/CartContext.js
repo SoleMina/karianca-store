@@ -9,7 +9,9 @@ import {
   doc,
   orderBy,
   limit,
-  Timestamp
+  Timestamp,
+  updateDoc,
+  increment
 } from "firebase/firestore";
 
 //Import db
@@ -90,7 +92,6 @@ export const CartContext = ({ children }) => {
     let sumaProductos = cartItems.reduce((a, item) => a + item.quantity, 0);
     setTotalProducts(sumaProductos);
   };
-
   //Get price from a especific item of the array
   const getPrice = () => {
     const total = cartItems.reduce(
@@ -129,6 +130,14 @@ export const CartContext = ({ children }) => {
 
     await setDoc(doc(comprasRef), object);
     console.log("Producto agregado!!!!");
+
+    const updateStock = () => {
+      cartItems.forEach((element) => {
+        const elementRef = doc(db, "products", element.id);
+        updateDoc(elementRef, { stock: increment(element.quantity * -1) });
+      });
+    };
+    updateStock();
   };
   const lastOrder = async () => {
     const arrayComprar = [];

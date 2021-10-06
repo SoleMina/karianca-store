@@ -41,7 +41,7 @@ const FormUser = () => {
 
   return (
     <div className="form-user">
-      <div className="container-form pt-5 pb-5">
+      <div className="container-form pt-3 pb-5">
         <h2 className="pt-3 pb-3 font-weight-bold">LOGIN</h2>
         <Form
           className="pb-3"
@@ -105,6 +105,7 @@ const FormUser = () => {
             }
           />
           <br />
+          <hr />
           <SocialMediaAuthComponent />
           <p className="pt-4">*Please complete all the blank spaces</p>
         </Form>
