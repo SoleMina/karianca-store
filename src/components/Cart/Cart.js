@@ -13,7 +13,6 @@ import "./Cart.css";
 
 const Cart = () => {
   const { cartItems, totalPrice } = useItemsContext();
-  console.log("ESTE ES LA CASETA", cartItems);
   return (
     <div className={`h-100 ${cartItems.length > 0 ? "bg-gray" : ""}`}>
       <h1

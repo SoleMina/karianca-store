@@ -30,7 +30,7 @@ const Orders = () => {
 
     setTimeout(() => {
       setCartItems([]);
-    }, 10000);
+    }, 90000);
   }, [setCartItems]);
 
   return (
@@ -47,6 +47,8 @@ const Orders = () => {
               style={{ minHeight: "82vh" }}
             >
               <div className="cart-item">
+                <h2>MY ORDERS</h2>
+                <hr />
                 <h2 className="text-center pb-4">Purchase ticket </h2>
                 <div className="row">
                   <div className="col-md-4 text-center">
@@ -102,7 +104,12 @@ const Orders = () => {
                     <h2 className="pb-4 pt-2">
                       <strong>Thank you for your purchase</strong>
                     </h2>
-                    <img className="img-orders" src={imgOrder} width="280" />
+                    <img
+                      alt="Order"
+                      className="img-orders"
+                      src={imgOrder}
+                      width="280"
+                    />
                   </div>
                   <Link to="/">
                     <button className="btn btn-primary">
