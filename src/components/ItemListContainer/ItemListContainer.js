@@ -16,7 +16,7 @@ const ItemListContainer = () => {
 
   const { categoryId } = useParams();
 
-  //Traernos los productos
+  //Get all the products
   const getProducts = async () => {
     const docs = [];
     const q = query(collection(db, "products"));
@@ -36,13 +36,13 @@ const ItemListContainer = () => {
       );
     });
 
-    resolveProducts
-      .then((response) => setProductos(response))
-      .finally(() => setLoading(false));
+    resolveProducts.then((response) => setProductos(response));
+    //.finally(() => setLoading(false));
   };
 
   useEffect(() => {
     getProducts();
+    setLoading(false);
   }, [categoryId]);
 
   return (
@@ -53,7 +53,12 @@ const ItemListContainer = () => {
         <div className="row" style={{ minHeight: "100vh" }}>
           {categoryId ? (
             <div>
-              <h1 className="text-center pt-4 pb-4">{categoryId}</h1>
+              <h1
+                className="text-center pt-4 pb-4"
+                style={{ textTransform: "uppercase" }}
+              >
+                {categoryId}
+              </h1>
             </div>
           ) : (
             <img src={bannerHome} height="450" style={{ objectFit: "cover" }} />
