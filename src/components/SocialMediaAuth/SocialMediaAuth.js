@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
+//Import auth from firebase
 import { getAuth, signInWithPopup, FacebookAuthProvider } from "firebase/auth";
 
 //Import context

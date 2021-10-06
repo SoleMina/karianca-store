@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import SpinnerContainer from "../SpinnerContainer/SpinnerContainer";
 
-//Import firebase
+//Import from firebase
 import { collection, query, getDocs } from "firebase/firestore";
 
 //Import db
@@ -20,14 +20,11 @@ const ItemDetailContainer = ({ match }) => {
     const docs = [];
     const q = query(collection(db, "products"));
 
-    //, where("capital", "==", true));
-
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       docs.push({ ...doc.data(), id: doc.id });
     });
     setItem(docs.find((producto) => producto.id === charID));
-    console.log("ESTE ES EL ITEM", item);
   };
 
   useEffect(() => {

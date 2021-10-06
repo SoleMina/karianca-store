@@ -1,0 +1,24 @@
+.cart-counter-mobile {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .cart-counter {
+    position: relative;
+    top: -29px;
+    right: -12px;
+  }
+}
+
+@media (max-width: 765px) {
+  .cart-counter {
+    position: relative;
+    top: -29px;
+    right: -12px;
+  }
+  .cart-counter-mobile {
+    display: block !important;
+  }
+  .cart-counter-desktop {
+    display: none !important;
+  }
+}

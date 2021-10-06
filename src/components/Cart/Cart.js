@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //Import icon
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-//Estilos
+//Style
 import "./Cart.css";
 
 const Cart = () => {

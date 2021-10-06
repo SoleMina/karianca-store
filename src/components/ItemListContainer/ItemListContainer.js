@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import SpinnerContainer from "../SpinnerContainer/SpinnerContainer";
 import { useParams } from "react-router-dom";
+
+//Import image
 import bannerHome from "../../online-shop.png";
+
+//Import style
 import "./ItemListContainer.css";
 
 //Import firebase
@@ -21,11 +25,9 @@ const ItemListContainer = () => {
   const getProducts = async () => {
     const docs = [];
     const q = query(collection(db, "products"));
-    //, where("capital", "==", true));
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-      //console.log(doc.id, "=>", doc.data());
       docs.push({ ...doc.data(), id: doc.id });
     });
 

@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 //Import from bootstrap
 import { Form } from "react-bootstrap";
 
-//Import form style
+//Import style
 import "./FormUser.css";
 
 //import SocialMediaAuth

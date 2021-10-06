@@ -39,8 +39,8 @@ const CartItem = ({ item }) => {
           </div>
           <div className="col-md-2">
             <FontAwesomeIcon
-              style={{ cursor: "pointer" }}
               icon={faTrash}
+              className="icon-awesome"
               onClick={() => removeItem(item.id)}
             />
           </div>

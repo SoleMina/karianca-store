@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import imgOrder from "../../girl-package.jpg";
 import { Link } from "react-router-dom";
+
+//Import style
 import "./Orders.css";
 
 import SpinnerContainer from "../SpinnerContainer/SpinnerContainer";
@@ -10,7 +12,6 @@ import { useItemsContext } from "../../CartContext";
 
 const Orders = () => {
   const [loading, setLoading] = useState(true);
-  const [ticket, setTicket] = useState(true);
   const {
     totalPrice,
     cartItems,
@@ -30,7 +31,7 @@ const Orders = () => {
     setTimeout(() => {
       setCartItems([]);
     }, 10000);
-  }, []);
+  }, [setCartItems]);
 
   return (
     <>
@@ -60,18 +61,16 @@ const Orders = () => {
                 </div>
                 <div className="row" key={item.id}>
                   <div className="col-md-4 text-center">
-                    {ticket
-                      ? cartItems.map((item) => {
-                          return (
-                            <p
-                              key={item.title}
-                              style={{ textAlign: "left", paddingLeft: "10%" }}
-                            >
-                              {"-" + item.title}
-                            </p>
-                          );
-                        })
-                      : ""}
+                    {cartItems.map((item) => {
+                      return (
+                        <p
+                          key={item.title}
+                          style={{ textAlign: "left", paddingLeft: "10%" }}
+                        >
+                          {"-" + item.title}
+                        </p>
+                      );
+                    })}
                   </div>
                   <div className="col-md-4">
                     {cartItems.length > 0 ? <p> {orderId}</p> : ""}

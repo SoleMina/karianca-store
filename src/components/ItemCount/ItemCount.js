@@ -2,9 +2,11 @@ import React, { useState } from "react";
 
 //Import from bootstrap
 import { Modal } from "react-bootstrap";
+
+//Import style
 import "./ItemCount.css";
 
-export const ItemCount = ({ stock, initial, onAdd, cart, callback }) => {
+export const ItemCount = ({ stock, initial, onAdd, cart }) => {
   const [counter, setCounter] = useState(initial);
   const [show, setShow] = useState(false);
 
@@ -26,7 +28,7 @@ export const ItemCount = ({ stock, initial, onAdd, cart, callback }) => {
   };
 
   return (
-    <div className="container" onClick={() => callback("heyyyy")}>
+    <div className="container">
       <div className="counter-container d-flex justify-content-between">
         <button onClick={handleDecrement}>-</button>
         <p className="m-0">{counter}</p>

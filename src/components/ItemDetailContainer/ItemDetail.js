@@ -17,12 +17,6 @@ const ItemDetail = ({ item }) => {
   const onAdd = (quantityToAdd) => {
     setCart(quantityToAdd);
     addToCart(item, quantityToAdd);
-    console.log(`Se ha añadido ${quantityToAdd} productos`);
-  };
-
-  //Testing callback
-  const callback = (hello) => {
-    console.log(hello + " This is a callback from child to parent");
   };
 
   return (
@@ -37,7 +31,6 @@ const ItemDetail = ({ item }) => {
                 stock={item.stock}
                 initial={1}
                 onAdd={onAdd}
-                callback={callback}
                 cart={cart}
               />
               {cart > 0 && (

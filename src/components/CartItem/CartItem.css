@@ -6,3 +6,6 @@
   margin-bottom: 2%;
   box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 15%);
 }
+.icon-awesome {
+  cursor: pointer;
+}

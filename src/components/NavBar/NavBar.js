@@ -10,6 +10,9 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 //Import component
 import CartWidget from "../CartWidget/CartWidget";
 
+//Import style
+import "./NavBar.css";
+
 const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -17,6 +20,18 @@ const NavBar = () => {
         <Navbar.Brand as={Link} to="/">
           Karianca Store
         </Navbar.Brand>
+        <Nav.Link
+          eventKey={2}
+          as={Link}
+          to="/cart"
+          className="cart-counter-mobile"
+        >
+          <CartWidget
+            icon={faShoppingCart}
+            className="cart-counter"
+            style={{ color: "gray" }}
+          />
+        </Nav.Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -31,8 +46,13 @@ const NavBar = () => {
                 Tv
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link eventKey={2} as={Link} to="/cart">
-              <CartWidget icon={faShoppingCart} />
+            <Nav.Link
+              eventKey={2}
+              as={Link}
+              to="/cart"
+              className="cart-counter-desktop"
+            >
+              <CartWidget icon={faShoppingCart} className="cart-counter" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
