@@ -12,7 +12,7 @@ const SocialMediaAuthComponent = () => {
   const history = useHistory();
   const {
     totalPrice,
-    AddProduct,
+    addProduct,
     cartItems,
     removeItem,
     orderTrue,
@@ -31,8 +31,7 @@ const SocialMediaAuthComponent = () => {
         const accessToken = credential.accessToken;
         console.log("FACEBOOK", result);
         console.log("NAME", result.user.displayName);
-        console.log("NAME", result.user.email);
-        AddProduct(
+        addProduct(
           result.user.displayName,
           null,
           result.user.email,

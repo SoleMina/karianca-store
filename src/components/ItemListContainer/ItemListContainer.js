@@ -36,13 +36,13 @@ const ItemListContainer = () => {
       );
     });
 
-    resolveProducts.then((response) => setProductos(response));
-    //.finally(() => setLoading(false));
+    resolveProducts
+      .then((response) => setProductos(response))
+      .finally(() => setLoading(false));
   };
 
   useEffect(() => {
     getProducts();
-    setLoading(false);
   }, [categoryId]);
 
   return (

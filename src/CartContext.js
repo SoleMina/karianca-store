@@ -17,16 +17,16 @@ import {
 //Import db
 import { db } from "./firebase";
 
-//.- CREAR EL CONTEXTO
+//.- Create context
 export const ItemsContext = createContext({});
 //export const ItemsContext =  createContext();
 
-//.- CREATE COMPONENT PROVIDER
+//.- Create component provider
 export const useItemsContext = () => useContext(ItemsContext);
 
-//- PASAR PROPS DENTRO DEL COMPONENTE PROVIDER
+//- Pass props inside provider component
 export const CartContext = ({ children }) => {
-  //Añadir localstore
+  //Add localstore
   const itemsInLocal = () => {
     if (localStorage.getItem("cartItems") !== null) {
       return JSON.parse(localStorage.getItem("cartItems"));
@@ -58,6 +58,7 @@ export const CartContext = ({ children }) => {
     }
   };
 
+  //Check if an element have the same id
   const isInCart = (id) => cartItems.some((e) => e.id === id);
 
   //Add product to array
@@ -109,7 +110,7 @@ export const CartContext = ({ children }) => {
   });
 
   //Add Product to firebase with Form
-  const AddProduct = async (
+  const addProduct = async (
     buyerName,
     buyerPhone,
     buyerEmail,
@@ -167,7 +168,7 @@ export const CartContext = ({ children }) => {
         clear,
         itemsInLocal,
         totalPrice,
-        AddProduct,
+        addProduct,
         item,
         setItem,
         totalProducts,

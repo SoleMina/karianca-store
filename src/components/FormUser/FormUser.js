@@ -22,7 +22,7 @@ const FormUser = () => {
 
   const {
     totalPrice,
-    AddProduct,
+    addProduct,
     cartItems,
     removeItem,
     orderTrue,
@@ -42,7 +42,7 @@ const FormUser = () => {
   return (
     <div className="form-user">
       <div className="container-form pt-3 pb-5">
-        <h2 className="pt-3 pb-3 font-weight-bold">LOGIN</h2>
+        <h2 className="pt-3 pb-3 font-weight-bold text-center">LOGIN</h2>
         <Form
           className="pb-3"
           onSubmit={onSubmit}
@@ -101,7 +101,7 @@ const FormUser = () => {
             type="submit"
             placeholder="Send"
             onClick={() =>
-              AddProduct(user, phone, email, cartItems, totalPrice)
+              addProduct(user, phone, email, cartItems, totalPrice)
             }
           />
           <br />
