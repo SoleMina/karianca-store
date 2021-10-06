@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import SpinnerContainer from "../SpinnerContainer/SpinnerContainer";
 import { useParams } from "react-router-dom";
 import bannerHome from "../../online-shop.png";
+import "./ItemListContainer.css";
 
 //Import firebase
 import { collection, query, getDocs } from "firebase/firestore";
@@ -61,7 +62,12 @@ const ItemListContainer = () => {
               </h1>
             </div>
           ) : (
-            <img src={bannerHome} height="450" style={{ objectFit: "cover" }} />
+            <img
+              src={bannerHome}
+              className="banner-mobile"
+              height="450"
+              style={{ objectFit: "cover" }}
+            />
           )}
           <ItemList productos={productos} />
         </div>

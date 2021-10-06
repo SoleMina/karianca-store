@@ -63,9 +63,12 @@ const Orders = () => {
                     {ticket
                       ? cartItems.map((item) => {
                           return (
-                            <span key={item.title}>
-                              {"-" + item.title + " "}
-                            </span>
+                            <p
+                              key={item.title}
+                              style={{ textAlign: "left", paddingLeft: "10%" }}
+                            >
+                              {"-" + item.title}
+                            </p>
                           );
                         })
                       : ""}
@@ -74,7 +77,7 @@ const Orders = () => {
                     {cartItems.length > 0 ? <p> {orderId}</p> : ""}
                   </div>
                   <div className="col-md-4 text-center">
-                    {cartItems.length > 0 ? totalPrice : ""}
+                    {cartItems.length > 0 ? "S/. " + totalPrice : ""}
                   </div>
                   <div className="col-md-12 text-center">
                     <Link to="/">

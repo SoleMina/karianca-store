@@ -1,0 +1,6 @@
+@media (max-width: 900px) {
+  .banner-mobile {
+    object-fit: scale-down;
+    height: fit-content;
+  }
+}

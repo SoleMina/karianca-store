@@ -25,3 +25,7 @@ En el proyecto son:
 <li>-useHistory</li>
 <li>-useContext</li>
 </ul>
+
+## Proyecto visual
+
+<img src="images/e-commerce.gif" />
