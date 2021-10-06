@@ -16,6 +16,8 @@ productos, fontawesome para los íconos, react-router-dom para las páginas indi
 
 ## Hooks utilizados
 
+En el proyecto son:
+
 <ul>
 <li>-useState</li>
 <li>-useEffect</li>
