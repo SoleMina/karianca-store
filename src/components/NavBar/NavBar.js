@@ -25,6 +25,7 @@ const NavBar = () => {
           as={Link}
           to="/cart"
           className="cart-counter-mobile"
+          style={{ position: "relative" }}
         >
           <CartWidget
             icon={faShoppingCart}
@@ -51,6 +52,7 @@ const NavBar = () => {
               as={Link}
               to="/cart"
               className="cart-counter-desktop"
+              style={{ position: "relative" }}
             >
               <CartWidget icon={faShoppingCart} className="cart-counter" />
             </Nav.Link>
