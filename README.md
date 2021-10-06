@@ -18,8 +18,8 @@ productos, fontawesome para los íconos, react-router-dom para las páginas indi
 
 <ul>
 <li>-useState</li>
+<li>-useEffect</li>
+<li>-useParams</li>
+<li>-useHistory</li>
+<li>-useContext</li>
 </ul>
--useEffect
--useParams
--useHistory
--useContext
